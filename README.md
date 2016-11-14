@@ -1,6 +1,6 @@
 #Strings.js#
 
-Some common functions for string parsing.
+A javascript library for manipulating strings.
 
 - `strings.capitalizeAll(string)`
 
