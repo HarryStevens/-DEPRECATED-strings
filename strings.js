@@ -8,5 +8,11 @@ var strings = {
   },
   capitalizeFirst: function(x){
     return x.charAt(0).toUpperCase() + x.slice(x.length-(x.length-1))
+  },
+  reverseLetters: function(x){
+    return x.split("").reverse().join("");
+  },
+  reverseWords: function(x){
+    return x.split(" ").reverse().join(" ");
   }
 };
