@@ -1,6 +1,6 @@
 #Strings.js#
 
-A javascript library for manipulating strings.
+###A javascript library for manipulating strings.###
 
 - `strings.capitalizeAll(string)`
 
