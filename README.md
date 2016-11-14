@@ -1,3 +1,5 @@
+#Strings.js#
+
 Some common functions for string parsing.
 
 - `strings.capitalizeAll(string)`
