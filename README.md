@@ -19,6 +19,14 @@ Capitalizes the first letter of the first word in a string.
 > Example: `strings.capitalizeFirst("hello world")` &rarr; "Hello world"
 
 ```javascript
+strings.lakhs(string)
+```
+
+Transforms a string of a number into Indian number format by adding commas in appropriate locations.
+
+> Example: `strings.reverseLetter("12345679.312")` &rarr; "1,23,45,679.312"
+
+```javascript
 strings.reverseLetters(string)
 ```
 
