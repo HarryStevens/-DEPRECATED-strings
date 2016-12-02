@@ -2,50 +2,26 @@
 
 ###A javascript library for manipulating strings.###
 
-```javascript
-strings.capitalizeAll(string)
-```
+`strings.capitalizeAll(string)`
 
-Capitalizes the first letter of every word in a string.
+Capitalizes the first letter of every word in a string. Example: `strings.capitalizeAll("hello world")` &rarr; "Hello World"
 
-> Example: `strings.capitalizeAll("hello world")` &rarr; "Hello World"
+`strings.capitalizeFirst(string)`
 
-```javascript
-strings.capitalizeFirst(string)
-```
+Capitalizes the first letter of the first word in a string. Example: `strings.capitalizeFirst("hello world")` &rarr; "Hello world"
 
-Capitalizes the first letter of the first word in a string.
+`strings.numberCommas(string)`
 
-> Example: `strings.capitalizeFirst("hello world")` &rarr; "Hello world"
+Adds commas to a number string for thousands, millions, billions, and so on. Example: `strings.numberCommas("12345679.312")` &rarr; "12,345,679.312"
 
-```javascript
-strings.numberCommas(string)
-```
+`strings.numberLakhs(string)`
 
-Adds commas to a number string for thousands, millions, billions, and so on.
+Adds commas to a number string for thousands, lakhs, crores, and so on. Example: `strings.numberLakhs("12345679.312")` &rarr; "1,23,45,679.312"
 
-> Example: `strings.numberCommas("12345679.312")` &rarr; "12,345,679.312"
+`strings.reverseLetters(string)`
 
-```javascript
-strings.numberLakhs(string)
-```
+Reverses the order of the string's letters. Example: `strings.reverseLetter("hello world")` &rarr; "dlrow olleh"
 
-Adds commas to a number string for thousands, lakhs, crores, and so on.
+`strings.reverseWords(string)`
 
-> Example: `strings.numberLakhs("12345679.312")` &rarr; "1,23,45,679.312"
-
-```javascript
-strings.reverseLetters(string)
-```
-
-Reverses the order of the string's letters.
-
-> Example: `strings.reverseLetter("hello world")` &rarr; "dlrow olleh"
-
-```javascript
-strings.reverseWords(string)
-```
-
-Reverses the order of the string's words.
-
-> Example: `strings.reverseWords("hello world")` &rarr; "world hello"
+Reverses the order of the string's words. Example: `strings.reverseWords("hello world")` &rarr; "world hello"
