@@ -19,12 +19,20 @@ Capitalizes the first letter of the first word in a string.
 > Example: `strings.capitalizeFirst("hello world")` &rarr; "Hello world"
 
 ```javascript
-strings.lakhs(string)
+strings.numberCommas(string)
 ```
 
-Transforms a string of a number into Indian number format by adding commas in appropriate locations.
+Adds commas to a number string for thousands, millions, billions, and so on.
 
-> Example: `strings.lakhs("12345679.312")` &rarr; "1,23,45,679.312"
+> Example: `strings.numberCommas("12345679.312")` &rarr; "12,345,679.312"
+
+```javascript
+strings.numberLakhs(string)
+```
+
+Adds commas to a number string for thousands, lakhs, crores, and so on.
+
+> Example: `strings.numberLakhs("12345679.312")` &rarr; "1,23,45,679.312"
 
 ```javascript
 strings.reverseLetters(string)
