@@ -25,7 +25,7 @@
 `strings.numberHundredths(string)`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rounds a number string, both float and integer, to the nearest hundredth.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberLakhs("12345679.312")` &rarr; "12345679.31"
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberHundredths("12345679.312")` &rarr; "12345679.31"
 
 `strings.reverseLetters(string)`
 
