@@ -20,6 +20,12 @@ var strings = {
     lastThree = otherNumbers != "" ? "," + lastThree : lastThree;
     return otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
   },
+  numberHundredths: function(x){
+    var s = x.toString().split("."),
+      a = s[0],
+      b = s[1];
+    return b == undefined ? x + ".00" : b.length == 1 ? x + "0" : b.length > 2 ? a + "." + Math.round(+b / Math.pow(10, b.length - 2)) : x;
+  },
   reverseLetters: function(x){
     return x.toString().split("").reverse().join("");
   },
