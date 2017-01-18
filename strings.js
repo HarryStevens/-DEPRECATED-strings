@@ -26,7 +26,7 @@ var strings = {
       b = s[1];
     var c = b == undefined ? "00" : b.length == 1 ? "0" : b.length > 2 ? Math.round(b / Math.pow(10, b.length - 2)) : x;
     if (c == 100) {
-      return +a + 1 + ".00";
+      return a.replace(/,/g , "") + 1 + ".00";
     } else {
       return a + "." + c;
     }
@@ -37,7 +37,7 @@ var strings = {
       b = s[1];
     var c = b == undefined ? 0 : b.length == 1 ? b : b.length > 1 ? Math.round(b / Math.pow(10, b.length - 1)) : x;
     if (c == 10) {
-      return +a + 1 + ".0";
+      return a.replace(/,/g , "") + 1 + ".0";
     } else {
       return a + "." + c;
     }
