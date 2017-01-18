@@ -36,7 +36,7 @@
 `strings.reverseLetters(string)`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reverses the order of the string's letters.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.reverseLetter("hello world")` &rarr; "dlrow olleh"
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.reverseLetters("hello world")` &rarr; "dlrow olleh"
 
 `strings.reverseWords(string)`
 
