@@ -27,10 +27,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rounds a number string, both float and integer, to the nearest hundredth.
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberHundredths("12345679.312")` &rarr; "12345679.31"
 
-`strings.numberHundredths(string)`
+`strings.numberTenths(string)`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rounds a number string, both float and integer, to the nearest tenth.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberHundredths("12345679.312")` &rarr; "12345679.3"
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberTenths("12345679.312")` &rarr; "12345679.3"
 
 
 `strings.reverseLetters(string)`
