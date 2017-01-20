@@ -50,4 +50,4 @@
 `strings.stripCommas(string)`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove commas from a string.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.stripcommas("123,456,789")` &rarr; "123456789"
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.stripCommas("123,456,789")` &rarr; "123456789"
