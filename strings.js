@@ -58,6 +58,15 @@ window.strings = (function () {
     return x.toString().split(" ").reverse().join(" ");
   }
 
+  o.slugify = function(x) {
+    return x.toString().toLowerCase()
+      .replace(/\s+/g, '-')           // Replace spaces with -
+      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+      .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+      .replace(/^-+/, '')             // Trim - from start of text
+      .replace(/-+$/, '');            // Trim - from end of text
+  }
+
   o.stripCommas = function(x){
     return x.toString().replace(/,/g , "");
   }

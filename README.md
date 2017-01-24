@@ -51,3 +51,8 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove commas from a string.
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.stripCommas("123,456,789")` &rarr; "123456789"
+
+`strings.slugify(string)`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transforms a string into a slug.
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.slugify("Hello world!")` &rarr; "hello-world"
