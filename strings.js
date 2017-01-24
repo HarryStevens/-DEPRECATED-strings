@@ -44,8 +44,7 @@ window.strings = (function () {
   };
 
   o.numberPrependZeros = function (x, n){
-    var s = "";
-    for (var i = 1; i <= n - o.stripCommas(x).length; i++){
+    for (var s = "", i = 1; i <= n - o.stripCommas(x).length; i++){
       s = s + "0";
     }
     return s + o.stripCommas(x);
