@@ -60,4 +60,4 @@
 `strings.titleCase(string, array)`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transforms a string into title case, where the first letter is capitalized except for certain prepositions, articles and conjunctions. You can include an optional array to ignore strings of your choice, such as acronyms.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.slugify("james comey to remain on as FBI director")` &rarr; "[James Comey to Remain on as FBI Director](http://www.nbcnews.com/news/us-news/comey-remain-fbi-director-n711506)"
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.titleCase("james comey to remain on as FBI director", ["FBI"])` &rarr; "[James Comey to Remain on as FBI Director](http://www.nbcnews.com/news/us-news/comey-remain-fbi-director-n711506)"
