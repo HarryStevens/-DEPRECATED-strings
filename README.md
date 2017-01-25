@@ -2,16 +2,6 @@
 
 ###A javascript library for manipulating strings.###
 
-`strings.capitalizeAll(string)`
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Capitalizes the first letter of every word in a string.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.capitalizeAll("hello world")` &rarr; "Hello World"
-
-`strings.capitalizeFirst(string)`
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Capitalizes the first letter of the first word in a string.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.capitalizeFirst("hello world")` &rarr; "Hello world"
-
 `strings.numberCommas(string)`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds commas to a number string for thousands, millions, billions, and so on.
@@ -47,15 +37,25 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reverses the order of the string's words.
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.reverseWords("hello world")` &rarr; "world hello"
 
-`strings.stripCommas(string)`
+`strings.sentenceCase(string)`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove commas from a string.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.stripCommas("123,456,789")` &rarr; "123456789"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Capitalizes the first letter of the first word in a string.
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.sentenceCase("hello world")` &rarr; "Hello world"
 
 `strings.slugify(string)`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transforms a string into a slug.
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.slugify("Hello world!")` &rarr; "hello-world"
+
+`strings.startCase(string)`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Capitalizes the first letter of every word in a string.
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.startCase("hello world")` &rarr; "Hello World"
+
+`strings.stripCommas(string)`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove commas from a string.
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.stripCommas("123,456,789")` &rarr; "123456789"
 
 `strings.titleCase(string, array)`
 

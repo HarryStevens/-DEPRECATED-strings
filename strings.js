@@ -2,7 +2,7 @@ window.strings = (function () {
 
   var o = {};
 
-  o.capitalizeAll = function(x){
+  o.startCase = function(x){
     var arr = [];
     x.split(" ").forEach(function(d){
       arr.push(o.capitalizeFirst(d));
@@ -10,7 +10,7 @@ window.strings = (function () {
     return arr.join(" ");
   };
 
-  o.capitalizeFirst = function(x){
+  o.sentenceCase = function(x){
     return x.toString().charAt(0).toUpperCase() + x.slice(x.length-(x.length-1));
   };
 
