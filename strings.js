@@ -5,7 +5,7 @@ window.strings = (function () {
   o.startCase = function(x){
     var arr = [];
     x.split(" ").forEach(function(d){
-      arr.push(o.capitalizeFirst(d));
+      arr.push(o.sentenceCase(d));
     });
     return arr.join(" ");
   };
@@ -16,10 +16,18 @@ window.strings = (function () {
 
   o.titleCase = function(x, y){
     var arr = [];
-    var ignore = ["a", "an", "and", "as", "by", "for", "in", "on", "of", "or", "out", "over", "the", "to"];
+    var ignore = ["a", "an", "and", "as", "but", "by", "for", "from", "in", "nor", "on", "of", "or", "out", "over", "the", "to"];
     if (y) ignore = ignore.concat(y);
-    x.split(" ").forEach(function(d){
-      if (ignore.indexOf(d) == -1) d = o.capitalizeFirst(d);
+    ignore.forEach(function(d){
+      ignore.push(o.sentenceCase(d));
+    });
+    var b = x.split(" ");
+    b.forEach(function(d, i){
+      if (ignore.indexOf(d) == -1 || b[i-1].slice(-1) == ":") {
+        d = o.sentenceCase(d);
+      } else {
+        d = d.toLowerCase();
+      }
       arr.push(d);
     });
     return arr.join(" ");
