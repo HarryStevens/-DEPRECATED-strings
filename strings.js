@@ -5,7 +5,7 @@ window.strings = (function () {
   o.capitalizeAll = function(x){
     var arr = [];
     x.split(" ").forEach(function(d){
-      arr.push(d.toString().charAt(0).toUpperCase() + d.slice(d.length-(d.length-1)));
+      arr.push(o.capitalizeFirst(d));
     });
     return arr.join(" ");
   };
@@ -13,6 +13,17 @@ window.strings = (function () {
   o.capitalizeFirst = function(x){
     return x.toString().charAt(0).toUpperCase() + x.slice(x.length-(x.length-1));
   };
+
+  o.titleCase = function(x, y){
+    var arr = [];
+    var ignore = ["a", "an", "and", "as", "by", "for", "in", "on", "of", "or", "out", "over", "the", "to"];
+    if (y) ignore = ignore.concat(y);
+    x.split(" ").forEach(function(d){
+      if (ignore.indexOf(d) == -1) d = o.capitalizeFirst(d);
+      arr.push(d);
+    });
+    return arr.join(" ");
+  }
 
   o.numberCommas = function(x){
     return o.stripCommas(x).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
