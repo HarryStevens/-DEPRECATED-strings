@@ -1,6 +1,8 @@
 #Strings.js#
 
-###A javascript library for manipulating strings.###
+A javascript library for manipulating strings. Provides two types of methods &mdash; one in its own `strings` namespace, and one that modifies the native Javascript `String` object, which allows for stringing methods, e.g. `"12345.15".numberDecimals(1).numberCommas()` &rarr; 12,345.2
+
+###Methods###
 
 `strings.numberCommas(string)` OR `string.numberCommas()`
 
@@ -45,19 +47,19 @@
 `strings.toSentenceCase(string)` OR `string.toSentenceCase()`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Capitalizes the first letter of the first word in a string.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.sentenceCase("hello world")` &rarr; "Hello world"
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.toSentenceCase("hello world")` &rarr; "Hello world"
 
 `strings.toSlugCase(string)` OR `string.toSlugCase()`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transforms a string into a slug.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.slugify("Hello world!")` &rarr; "hello-world"
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.toSlugCase("Hello world!")` &rarr; "hello-world"
 
 `strings.toStartCase(string)` OR `string.toStartCase()`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Capitalizes the first letter of every word in a string.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.startCase("hello world")` &rarr; "Hello World"
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.toStartCase("hello world")` &rarr; "Hello World"
 
 `strings.toTitleCase(string, array)` OR `string.toTitleCase(array)`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transforms a string into title case, where the first letter of every word is capitalized except for certain prepositions, articles and conjunctions. You can include an optional array to ignore strings of your choice, such as acronyms.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.titleCase("james comey to remain on as FBI director", ["FBI"])` &rarr; "[James Comey to Remain on as FBI Director](http://www.nbcnews.com/news/us-news/comey-remain-fbi-director-n711506)"
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.toTitleCase("james comey to remain on as FBI director", ["FBI"])` &rarr; "[James Comey to Remain on as FBI Director](http://www.nbcnews.com/news/us-news/comey-remain-fbi-director-n711506)"

@@ -67,7 +67,7 @@ String.prototype.toTitleCase = function(array){
   var b = this.split(" ");
 
   return b.forEach(function(d, i){
-    arr.push(ignore.indexOf(d) == -1 || b[i-1].slice(-1) == ":" ? d.toSentenceCase() : y.indexOf(d) != -1 ? d : d.toLowerCase());
+    arr.push(ignore.indexOf(d) == -1 || b[i-1].endsWith(":") ? d.toSentenceCase() : array && array.indexOf(d) != -1 ? d : d.toLowerCase());
   }), arr.join(" ");
 }
 
@@ -133,7 +133,7 @@ window.strings = (function () {
   o.toStartCase = function(x){
     var arr = [];
     x.split(" ").forEach(function(d){
-      arr.push(o.sentenceCase(d));
+      arr.push(o.toSentenceCase(d));
     });
     return arr.join(" ");
   };
@@ -144,13 +144,13 @@ window.strings = (function () {
     var ignore = ["a", "an", "and", "as", "at", "but", "by", "for", "from", "if", "in", "nor", "on", "of", "off", "or", "out", "over", "the", "to", "vs"];
     if (y) ignore = ignore.concat(y);
     ignore.forEach(function(d){
-      ignore.push(o.sentenceCase(d));
+      ignore.push(o.toSentenceCase(d));
     });
 
     var b = x.split(" ");
 
     return b.forEach(function(d, i){
-      arr.push(ignore.indexOf(d) == -1 || b[i-1].slice(-1) == ":" ? o.sentenceCase(d) : y.indexOf(d) != -1 ? d : d.toLowerCase());
+      arr.push(ignore.indexOf(d) == -1 || b[i-1].endsWith(":") ? o.toSentenceCase(d) : y && y.indexOf(d) != -1 ? d : d.toLowerCase());
     }), arr.join(" ");
 
   }
