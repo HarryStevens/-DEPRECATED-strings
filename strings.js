@@ -1,12 +1,12 @@
-String.prototype.numberCommas = function(){
+String.prototype.numberCommas = function numberCommas(){
   return this.removeCommas().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
-String.prototype.numberDecimals = function(number){
+String.prototype.numberDecimals = function numberDecimals(number){
   return Number(this).toFixed(number);
 };
 
-String.prototype.numberLakhs = function(){
+String.prototype.numberLakhs = function numberLakhs(){
   x = this.removeCommas();
   var afterPoint = x.indexOf(".") > 0 ? x.substring(x.indexOf("."), x.length) : "";
   x = Math.floor(x).toString();
@@ -15,40 +15,40 @@ String.prototype.numberLakhs = function(){
   return otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
 };
 
-String.prototype.numberPrependZeros = function (number){
+String.prototype.numberPrependZeros = function numberPrependZeros(number){
   for (var s = "", i = 1; i <= number - this.removeCommas().length; i++){
     s = s + "0";
   }
   return s + this.removeCommas();
 };
 
-String.prototype.removeCommas = function(){
+String.prototype.removeCommas = function removeCommas(){
   return this.toString().replace(/,/g , "");
 }
 
-String.prototype.reverseLetters = function(){
+String.prototype.reverseLetters = function reverseLetters(){
   return this.toString().split("").reverse().join("");
 };
 
-String.prototype.reverseWords = function(){
+String.prototype.reverseWords = function reverseWords(){
   return this.toString().split(" ").reverse().join(" ");
 }
 
-String.prototype.toCamelCase = function(){
+String.prototype.toCamelCase = function toCamelCase(){
   return this.replace(/(?:^\w|[A-Z]|\b\w)/g, function(letter, index) {
     return index == 0 ? letter.toLowerCase() : letter.toUpperCase();
   }).replace(/\s+/g, '').replace(/[^\w\-]+/g, '');
 }
 
-String.prototype.toSentenceCase = function(){
+String.prototype.toSentenceCase = function toSentenceCase(){
   return this.toString().charAt(0).toUpperCase() + this.slice(this.length-(this.length-1));
 }
 
-String.prototype.toSlugCase = function() {
+String.prototype.toSlugCase = function toSlugCase() {
   return this.toString().toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').replace(/^-+/, '').replace(/-+$/, '');
 }
 
-String.prototype.toStartCase = function(){
+String.prototype.toStartCase = function toStartCase(){
   var arr = [];
   this.split(" ").forEach(function(d){
     arr.push(d.toSentenceCase());
@@ -56,7 +56,7 @@ String.prototype.toStartCase = function(){
   return arr.join(" ");
 }
 
-String.prototype.toTitleCase = function(array){
+String.prototype.toTitleCase = function toTitleCase(array){
   var arr = [];
   var ignore = ["a", "an", "and", "as", "at", "but", "by", "for", "from", "if", "in", "nor", "on", "of", "off", "or", "out", "over", "the", "to", "vs"];
   if (array) ignore = ignore.concat(array);
