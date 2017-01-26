@@ -2,8 +2,6 @@
 
 strings.js is a Javascript library for manipulating strings. Javascript has many [built-in methods for manipulating strings](http://www.w3schools.com/jsref/jsref_obj_string.asp). The functions in this library are meant to supplement those.
 
-Each function can be used in two ways. First, a function can be used in the `strings` namespace (e.g. `strings.method("Hello world!")`); second, it can be used as a modification to the native Javascript `String` object, which allows for applying multiple functions to a single string (e.g. `"12345.15".numberDecimals(1).numberCommas()` &rarr; 12,345.2).
-
 ##Functions##
 
 <a name="numberCommas" href="#numberCommas">#</a> strings.<b>numberCommas</b>(<i>string</i>)
@@ -52,7 +50,7 @@ Capitalizes the first letter of the first word in a string.
 
 <a name="toSlugCase" href="#toSlugCase">#</a> strings.<b>toSlugCase</b>(<i>string</i>)
 
-Transforms a string into a slug. E.g. `strings.toSlugCase("Hello world!") // "hello-world"`
+Transforms a string into a slug. `strings.toSlugCase("Hello world!") // "hello-world"`
 
 <a name="toStartCase" href="#toStartCase">#</a> strings.<b>toStartCase</b>(<i>string</i>)
 
@@ -60,4 +58,4 @@ Capitalizes the first letter of every word in a string.
 
 <a name="toTitleCase" href="#toTitleCase">#</a> strings.<b>toTitleCase</b>(<i>string</i>[, <i>array</i>])
 
-Transforms a string into title case, where the first letter of every word is capitalized except for certain prepositions, articles and conjunctions. You can include an optional array to ignore strings of your choice, such as acronyms. E.g. `strings.toTitleCase("james comey to remain on as FBI director", ["FBI"]) // "James Comey to Remain on as FBI Director"`
+Transforms a string into title case, where the first letter of every word is capitalized except for certain prepositions, articles and conjunctions. You can include an optional array to ignore strings of your choice, such as acronyms. `strings.toTitleCase("james comey to remain on as FBI director", ["FBI"]) // "James Comey to Remain on as FBI Director"`
