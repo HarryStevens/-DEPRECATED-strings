@@ -10,8 +10,7 @@ Each function can be used in two ways. First, a function can be used in the `str
 
 Adds commas to a number string for thousands, millions, billions, and so on.
 ```js
-var x = strings.numberCommas("12345679.312");
-console.log(x); // "12,345,679.312"
+strings.numberCommas("12345679.312"); // "12,345,679.312"
 ```
 
 <a name="" href="#">#</a>`strings.numberDecimals(string, number)` OR `string.numberDecimals(number)`
