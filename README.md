@@ -1,10 +1,10 @@
 #Strings.js#
 
-A javascript library for manipulating strings. Provides two types of methods &mdash; one in its own `strings` namespace, and one that modifies the native Javascript `String` object, which allows for stringing methods, e.g. `"12345.15".numberDecimals(1).numberCommas()` &rarr; 12,345.2
+A javascript library for manipulating strings. Javascript has many [built-in methods for manipulating strings](http://www.w3schools.com/jsref/jsref_obj_string.asp). The functions in this library are meant to supplement those.
 
-Please keep in mind that Javascript has many [built-in methods for manipulating strings](http://www.w3schools.com/jsref/jsref_obj_string.asp). The methods in this library are meant to supplement those.
+Each function can be used in two ways. First, a function can be used in the `strings` namespace (e.g. `strings.method("Hello world!")`); second, it can be used as a modification the native Javascript `String` object, which allows for applying multiple functions to a single string (e.g. `"12345.15".numberDecimals(1).numberCommas()` &rarr; 12,345.2).
 
-###Methods###
+##Functions##
 
 `strings.numberCommas(string)` OR `string.numberCommas()`
 
