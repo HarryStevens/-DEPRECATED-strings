@@ -2,6 +2,8 @@
 
 A javascript library for manipulating strings. Provides two types of methods &mdash; one in its own `strings` namespace, and one that modifies the native Javascript `String` object, which allows for stringing methods, e.g. `"12345.15".numberDecimals(1).numberCommas()` &rarr; 12,345.2
 
+Please keep in mind that Javascript has many [built-in methods for manipulating strings](http://www.w3schools.com/jsref/jsref_obj_string.asp). The methods in this library are meant to supplement those.
+
 ###Methods###
 
 `strings.numberCommas(string)` OR `string.numberCommas()`
