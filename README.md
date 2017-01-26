@@ -24,7 +24,7 @@
 
 `strings.numberPrependZeros(string, number)` OR `string.numberPrependZeros(number)`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds zeros before a string so that the string equals a given number of characters. Does nothing to the string if it is already longer than the number of characters.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds zeros before a string so that the length of the string equals a given number of characters. Does nothing to the string if it is already longer than the number of characters.
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberPrependZeros("1234", 6)` &rarr; "001234"
 
 `strings.reverseLetters(string)` OR `string.reverseLetters()`
