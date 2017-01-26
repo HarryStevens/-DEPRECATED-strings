@@ -25,6 +25,12 @@ String.prototype.toTitleCase = function(array){
   }), arr.join(" ");
 }
 
+String.prototype.toCamelCase = function(){
+  return this.replace(/(?:^\w|[A-Z]|\b\w)/g, function(letter, index) {
+    return index == 0 ? letter.toLowerCase() : letter.toUpperCase();
+  }).replace(/\s+/g, '').replace(/[^\w\-]+/g, '');
+}
+
 String.prototype.toSlugCase = function() {
   return this.toString().toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').replace(/^-+/, '').replace(/-+$/, '');
 }
@@ -166,6 +172,12 @@ window.strings = (function () {
 
   o.removeCommas = function(x){
     return x.toString().replace(/,/g , "");
+  }
+
+  o.toCamelCase = function(x){
+    return x.replace(/(?:^\w|[A-Z]|\b\w)/g, function(letter, index) {
+      return index == 0 ? letter.toLowerCase() : letter.toUpperCase();
+    }).replace(/\s+/g, '').replace(/[^\w\-]+/g, '');
   }
 
   return o;

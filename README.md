@@ -42,6 +42,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove commas from a string.
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.removeCommas("123,456,789")` &rarr; "123456789"
 
+`strings.toCamelCase(string)` OR `string.toCamelCase()`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transforms a string into camel case.
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.toCamelCase("Hello world!")` &rarr; "helloWorld"
+
 `strings.toSentenceCase(string)` OR `string.toSentenceCase()`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Capitalizes the first letter of the first word in a string.
