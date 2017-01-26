@@ -8,7 +8,7 @@ Each function can be used in two ways. First, a function can be used in the `str
 
 <a name="numberCommas" href="#numberCommas">#</a> strings.<b>numberCommas</b>(<i>string</i>)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds commas to a number string for thousands, millions, billions, and so on.
+Adds commas to a number string for thousands, millions, billions, and so on.
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberCommas("12345679.312")` &rarr; "12,345,679.312"
 
 <a name="" href="#">#</a>`strings.numberDecimals(string, number)` OR `string.numberDecimals(number)`
