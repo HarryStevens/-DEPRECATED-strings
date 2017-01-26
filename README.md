@@ -16,7 +16,7 @@ Rounds a number string, both float and integer, to the nearest specified decimal
 
 Adds commas to a number string for thousands, lakhs, crores, and so on. This is according to the [Indian numbering system](https://en.wikipedia.org/wiki/Indian_numbering_system).
 
-<a name="numberPrependZeros" href="#numberPrependZeros">#</a>strings.<b>numberPrependZeros</b>(<i>string</i>, <i>number</i>)
+<a name="numberPrependZeros" href="#numberPrependZeros">#</a> strings.<b>numberPrependZeros</b>(<i>string</i>, <i>number</i>)
 
 Adds zeros before a string so that the length of the string equals a given number of characters. Does nothing to the string if it is already longer than the number of characters. `strings.numberPrependZeros("1234", 6) // "001234"`
 
