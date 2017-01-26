@@ -1,4 +1,4 @@
-#Strings.js#
+#strings.js#
 
 A javascript library for manipulating strings. Javascript has many [built-in methods for manipulating strings](http://www.w3schools.com/jsref/jsref_obj_string.asp). The functions in this library are meant to supplement those.
 
