@@ -10,7 +10,7 @@ Adds commas to a number string for thousands, millions, billions, and so on.
 
 <a name="numberDecimals" href="#numberDecimals">#</a> strings.<b>numberDecimals</b>(<i>string</i>, <i>number</i>)
 
-Rounds a number string, both float and integer, to the nearest specified decimal place.
+Rounds a number string, both float and integer, to the nearest specified decimal place. `strings.numberDecimals("1.235", 2) // "1.24"`
 
 <a name="numberLakhs" href="#numberLakhs">#</a> strings.<b>numberLakhs</b>(<i>string</i>)
 
@@ -18,7 +18,7 @@ Adds commas to a number string for thousands, lakhs, crores, and so on. This is 
 
 <a name="numberPrependZeros" href="#numberPrependZeros">#</a>strings.<b>numberPrependZeros</b>(<i>string</i>, <i>number</i>)
 
-Adds zeros before a string so that the length of the string equals a given number of characters. Does nothing to the string if it is already longer than the number of characters. E.g. `strings.numberPrependZeros("1234", 6) // "001234"`
+Adds zeros before a string so that the length of the string equals a given number of characters. Does nothing to the string if it is already longer than the number of characters. `strings.numberPrependZeros("1234", 6) // "001234"`
 
 <a name="removeCommas" href="#removeCommas">#</a> strings.<b>removeCommas</b>(<i>string</i>)
 
