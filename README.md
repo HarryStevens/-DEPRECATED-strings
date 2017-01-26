@@ -2,7 +2,7 @@
 
 strings.js is a Javascript library for manipulating strings. Javascript has many [built-in methods for manipulating strings](http://www.w3schools.com/jsref/jsref_obj_string.asp). The functions in this library are meant to supplement those.
 
-Each function can be used in two ways. First, a function can be used in the `strings` namespace (e.g. `strings.method("Hello world!")`); second, it can be used as a modification the native Javascript `String` object, which allows for applying multiple functions to a single string (e.g. `"12345.15".numberDecimals(1).numberCommas()` &rarr; 12,345.2).
+Each function can be used in two ways. First, a function can be used in the `strings` namespace (e.g. `strings.method("Hello world!")`); second, it can be used as a modification to the native Javascript `String` object, which allows for applying multiple functions to a single string (e.g. `"12345.15".numberDecimals(1).numberCommas()` &rarr; 12,345.2).
 
 ##Functions##
 
