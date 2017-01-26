@@ -43,7 +43,7 @@ Each function can be used in two ways. First, a function can be used in the `str
 
 `strings.shuffleCharacters(string)` OR `string.shuffleCharacters()`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Randomly shuffles a string's letters.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Randomly shuffles a string's characters.
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.shuffleCharacters("hello world")` &rarr; "r holledowl"
 
 `strings.shuffleWords(string)` OR `string.shuffleWords()`
