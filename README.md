@@ -31,15 +31,25 @@ Each function can be used in two ways. First, a function can be used in the `str
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove commas from a string.
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.removeCommas("123,456,789")` &rarr; "123456789"
 
-`strings.reverseLetters(string)` OR `string.reverseLetters()`
+`strings.reverseCharacters(string)` OR `string.reverseCharacters()`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reverses the order of the string's letters.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.reverseLetters("hello world")` &rarr; "dlrow olleh"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reverses the order of the string's characters.
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.reverseCharacters("hello world")` &rarr; "dlrow olleh"
 
 `strings.reverseWords(string)` OR `string.reverseWords()`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reverses the order of the string's words.
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.reverseWords("hello world")` &rarr; "world hello"
+
+`strings.shuffleCharacters(string)` OR `string.shuffleCharacters()`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Randomly shuffles a string's letters.
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.shuffleCharacters("hello world")` &rarr; "r holledowl"
+
+`strings.shuffleWords(string)` OR `string.shuffleWords()`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Randomly shuffles a string's words.
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.shuffleWords("The quick brown fox jumps over the lazy dog.")` &rarr; "brown lazy the The fox dog. quick over jumps"
 
 `strings.toCamelCase(string)` OR `string.toCamelCase()`
 

@@ -26,12 +26,36 @@ String.prototype.removeCommas = function removeCommas(){
   return this.toString().replace(/,/g , "");
 }
 
-String.prototype.reverseLetters = function reverseLetters(){
+String.prototype.reverseCharacters = function reverseCharacters(){
   return this.toString().split("").reverse().join("");
 };
 
 String.prototype.reverseWords = function reverseWords(){
   return this.toString().split(" ").reverse().join(" ");
+}
+
+String.prototype.shuffleCharacters = function shuffleCharacters(){
+  var array = this.split("");
+  var m = array.length, t, i;
+  while (m) {
+    i = Math.floor(Math.random() * m--);
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+  return array.join("");
+}
+
+String.prototype.shuffleWords = function shuffleWords(){
+  var array = this.split(" ");
+  var m = array.length, t, i;
+  while (m) {
+    i = Math.floor(Math.random() * m--);
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+  return array.join(" ");
 }
 
 String.prototype.toCamelCase = function toCamelCase(){
@@ -103,12 +127,36 @@ window.strings = (function () {
     return x.toString().replace(/,/g , "");
   }
 
-  o.reverseLetters = function(x){
+  o.reverseCharacters = function(x){
     return x.toString().split("").reverse().join("");
   };
 
   o.reverseWords = function(x){
     return x.toString().split(" ").reverse().join(" ");
+  }
+
+  o.shuffleCharacters = function(x){
+    var array = x.split("");
+    var m = array.length, t, i;
+    while (m) {
+      i = Math.floor(Math.random() * m--);
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
+    }
+    return array.join("");
+  }
+
+  o.shuffleWords = function(x){
+    var array = x.split(" ");
+    var m = array.length, t, i;
+    while (m) {
+      i = Math.floor(Math.random() * m--);
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
+    }
+    return array.join(" ");
   }
 
   o.toCamelCase = function(x){
