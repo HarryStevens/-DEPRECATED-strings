@@ -11,20 +11,25 @@ Each function can be used in two ways. First, a function can be used in the `str
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds commas to a number string for thousands, millions, billions, and so on.
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberCommas("12345679.312")` &rarr; "12,345,679.312"
 
-`strings.numberLakhs(string)` OR `string.numberLakhs()`
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds commas to a number string for thousands, lakhs, crores, and so on.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberLakhs("12345679.312")` &rarr; "1,23,45,679.312"
-
 `strings.numberDecimals(string, number)` OR `string.numberDecimals(number)`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rounds a number string, both float and integer, to the nearest specified decimal place.
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberDecimals("12345679.312", 4)` &rarr; "12345679.3120"
 
+`strings.numberLakhs(string)` OR `string.numberLakhs()`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds commas to a number string for thousands, lakhs, crores, and so on.
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberLakhs("12345679.312")` &rarr; "1,23,45,679.312"
+
 `strings.numberPrependZeros(string, number)` OR `string.numberPrependZeros(number)`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds zeros before a string so that the length of the string equals a given number of characters. Does nothing to the string if it is already longer than the number of characters.
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberPrependZeros("1234", 6)` &rarr; "001234"
+
+`strings.removeCommas(string)` OR `string.removeCommas()`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove commas from a string.
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.removeCommas("123,456,789")` &rarr; "123456789"
 
 `strings.reverseLetters(string)` OR `string.reverseLetters()`
 
@@ -35,11 +40,6 @@ Each function can be used in two ways. First, a function can be used in the `str
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reverses the order of the string's words.
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.reverseWords("hello world")` &rarr; "world hello"
-
-`strings.removeCommas(string)` OR `string.removeCommas()`
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove commas from a string.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.removeCommas("123,456,789")` &rarr; "123456789"
 
 `strings.toCamelCase(string)` OR `string.toCamelCase()`
 
