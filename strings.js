@@ -15,22 +15,20 @@ window.strings = (function () {
   };
 
   o.titleCase = function(x, y){
+
     var arr = [];
-    var ignore = ["a", "an", "and", "as", "but", "by", "for", "from", "in", "nor", "on", "of", "or", "out", "over", "the", "to"];
+    var ignore = ["a", "an", "and", "as", "at", "but", "by", "for", "from", "if", "in", "nor", "on", "of", "off", "or", "out", "over", "the", "to", "vs"];
     if (y) ignore = ignore.concat(y);
     ignore.forEach(function(d){
       ignore.push(o.sentenceCase(d));
     });
+
     var b = x.split(" ");
-    b.forEach(function(d, i){
-      if (ignore.indexOf(d) == -1 || b[i-1].slice(-1) == ":") {
-        d = o.sentenceCase(d);
-      } else {
-        d = d.toLowerCase();
-      }
-      arr.push(d);
-    });
-    return arr.join(" ");
+
+    return b.forEach(function(d, i){
+      arr.push(ignore.indexOf(d) == -1 || b[i-1].slice(-1) == ":" ? o.sentenceCase(d) : y.indexOf(d) != -1 ? d : d.toLowerCase());
+    }), arr.join(" ");
+
   }
 
   o.numberCommas = function(x){
