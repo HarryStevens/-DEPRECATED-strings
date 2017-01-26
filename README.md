@@ -12,15 +12,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds commas to a number string for thousands, lakhs, crores, and so on.
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberLakhs("12345679.312")` &rarr; "1,23,45,679.312"
 
-`strings.numberHundredths(string)` OR `string.numberHundredths()`
+`strings.numberDecimals(string, number)` OR `string.numberDecimals(number)`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rounds a number string, both float and integer, to the nearest hundredth.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberHundredths("12345679.312")` &rarr; "12345679.31"
-
-`strings.numberTenths(string)` OR `string.numberTenths()`
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rounds a number string, both float and integer, to the nearest tenth.
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberTenths("12345679.312")` &rarr; "12345679.3"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rounds a number string, both float and integer, to the nearest specified decimal place.
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strings.numberDecimals("12345679.312", 4)` &rarr; "12345679.3120"
 
 `strings.numberPrependZeros(string, number)` OR `string.numberPrependZeros(number)`
 

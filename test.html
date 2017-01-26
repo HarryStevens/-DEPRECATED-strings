@@ -1,10 +1,10 @@
 <script src="strings.js"></script>
 <script>
 var test = "Hello world!";
-var testNum = "12345679.995";
+var testNum = "12345679.312";
 var custom = "1234"
-var x = test.toCamelCase();
-var y = strings.toCamelCase(test)
-console.log(x);
+var x = testNum.numberDecimals(2).numberCommas();
+var y = strings.numberDecimals(testNum, 4)
+// console.log(x);
 console.log(y);
 </script>

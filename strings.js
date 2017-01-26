@@ -52,20 +52,8 @@ String.prototype.removeCommas = function(){
   return this.toString().replace(/,/g , "");
 }
 
-String.prototype.numberHundredths = function(){
-  var s = this.toString().split("."),
-    a = s[0],
-    b = s[1];
-  var c = b == undefined ? "00" : b.length == 1 ? b + "0" : b.length == 2 ? b : b.length > 2 ? Math.round(b / Math.pow(10, b.length - 2)) : "00";
-  return c == 100 ? +a.removeCommas() + 1 + ".00" : a + "." + c;
-};
-
-String.prototype.numberTenths = function(){
-  var s = this.toString().split("."),
-    a = s[0],
-    b = s[1];
-  var c = b == undefined ? 0 : b.length == 1 ? b : b.length > 1 ? Math.round(b / Math.pow(10, b.length - 1)) : 0;
-  return c == 10 ? +a.removeCommas() + 1 + ".0" : a + "." + c;
+String.prototype.numberDecimals = function(number){
+  return Number(this).toFixed(number);
 };
 
 String.prototype.numberPrependZeros = function (number){
@@ -179,6 +167,10 @@ window.strings = (function () {
       return index == 0 ? letter.toLowerCase() : letter.toUpperCase();
     }).replace(/\s+/g, '').replace(/[^\w\-]+/g, '');
   }
+
+  o.numberDecimals = function(x, number){
+    return Number(x).toFixed(number);
+  };
 
   return o;
 
