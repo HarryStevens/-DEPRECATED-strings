@@ -93,9 +93,9 @@ strings.endsWith("Hello world", "LD", false) // false
 Tests whether a string includes another string. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
 
 ```js
-strings.endsWith("Hello world", "WO") // false
-strings.endsWith("Hello world", "WO", true) // true
-strings.endsWith("Hello world", "WO", false) // false
+strings.includes("Hello world", "WO") // false
+strings.includes("Hello world", "WO", true) // true
+strings.includes("Hello world", "WO", false) // false
 ```
 
 <a name="startsWith" href="#startsWith">#</a> strings.<b>startsWith</b>(<i>string</i>, <i>string</i>[, <i>boolean</i>])
