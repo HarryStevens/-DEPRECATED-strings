@@ -1,6 +1,6 @@
 #strings.js#
 
-strings.js is a Javascript library for manipulating strings. Javascript has many [built-in methods for manipulating strings](http://www.w3schools.com/jsref/jsref_obj_string.asp). The functions in this library are meant to supplement those.
+strings.js is a Javascript library for manipulating strings. Javascript has many [built-in methods for manipulating strings](http://www.w3schools.com/jsref/jsref_obj_string.asp). The functions in this library are meant to supplement those. To use this library in your project, download `strings.js` or `strings.min.js` for the `src` directory, and include it in your HTML file as `<script src="path/to/strings.js"></script>` or `<script src="path/to/strings.min.js"></script>`.
 
 ##API Reference##
 * [Cases](#cases)
