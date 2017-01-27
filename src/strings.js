@@ -49,6 +49,10 @@ window.strings = (function () {
     return util.shuffle(x.split("")).join("");
   }
 
+  o.shuffleCharactersInWords = function(x){
+    return x.split(" ").map(function(d){ return o.shuffleCharacters(d); }).join(" ");
+  }
+
   o.shuffleWords = function(x){
     return util.shuffle(x.split(" ")).join(" ");
   }

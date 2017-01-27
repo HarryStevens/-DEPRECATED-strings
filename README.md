@@ -102,6 +102,10 @@ Reverses the order of a string's words.
 
 Randomly shuffles a string's characters. Uses the [Fischer-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle).
 
+<a name="shuffleCharactersInWords" href="#shuffleCharactersInWords">#</a> strings.<b>shuffleCharactersInWords</b>(<i>string</i>)
+
+Randomly shuffles the characters of each word, but keeps the words in order. Uses the [Fischer-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle).
+
 <a name="shuffleWords" href="#shuffleWords">#</a> strings.<b>shuffleWords</b>(<i>string</i>)
 
 Randomly shuffles a string's words. Uses the [Fischer-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle).
