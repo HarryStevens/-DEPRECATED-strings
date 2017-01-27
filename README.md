@@ -10,7 +10,7 @@ strings.js is a Javascript library for manipulating strings. Javascript has many
 
 ###Cases###
 
-Functions for change the case of words and characters.
+Functions for changing the case of words and characters.
 
 <a name="toCamelCase" href="#toCamelCase">#</a> strings.<b>toCamelCase</b>(<i>string</i>)
 
