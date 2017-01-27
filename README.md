@@ -59,6 +59,10 @@ Functions for applying various transformations to strings.
 
 Remove commas from a string.
 
+<a name="removeTags" href="#removeTags">#</a> strings.<b>removeTags</b>(<i>string</i>[, <i>array</i>])
+
+Remove HTML tags from a string. You can pass an optional array with the tags you want to keep. `strings.removeTags("<span><i>Hello</i> <b>world</b>!</span>", ["i", "span"]) // <span><i>Hello</i> world!</span>`
+
 <a name="reverseCharacters" href="#reverseCharacters">#</a> strings.<b>reverseCharacters</b>(<i>string</i>)
 
 Reverses the order of a string's characters.

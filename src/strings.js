@@ -30,6 +30,13 @@ window.strings = (function () {
     return x.toString().replace(/,/g , "");
   }
 
+  o.removeTags = function(x, y){
+    return y ? x.split("<").filter(function(val){ return f(y, val); }).map(function(val){ return f(y, val); }).join("") : x.split("<").map(function(d){ return d.split(">").pop() }).join("");
+    function f(array, value){
+      return array.map(function(d){ return value.includes(d + ">"); }).indexOf(true) != -1 ? "<" + value : value.split(">")[1];
+    }
+  }
+
   o.reverseCharacters = function(x){
     return x.toString().split("").reverse().join("");
   };
@@ -82,27 +89,20 @@ window.strings = (function () {
   }
 
   o.toStartCase = function(x){
-    var arr = [];
-    x.split(" ").forEach(function(d){
-      arr.push(o.toSentenceCase(d));
-    });
-    return arr.join(" ");
+    return x.split(" ").map(function(d){ return o.toSentenceCase(d); }).join(" ");
   };
 
   o.toTitleCase = function(x, y){
 
-    var arr = [];
     var ignore = ["a", "an", "and", "as", "at", "but", "by", "for", "from", "if", "in", "nor", "on", "of", "off", "or", "out", "over", "the", "to", "vs"];
     if (y) ignore = ignore.concat(y);
     ignore.forEach(function(d){
       ignore.push(o.toSentenceCase(d));
     });
 
-    var b = x.split(" ");
-
-    return b.forEach(function(d, i){
-      arr.push(ignore.indexOf(d) == -1 || b[i-1].endsWith(":") ? o.toSentenceCase(d) : y && y.indexOf(d) != -1 ? d : d.toLowerCase());
-    }), arr.join(" ");
+    return x.split(" ").map(function(d, i){
+      return ignore.indexOf(d) == -1 || b[i-1].endsWith(":") ? o.toSentenceCase(d) : y && y.indexOf(d) != -1 ? d : d.toLowerCase();
+    }).join(" ");
 
   }
 
