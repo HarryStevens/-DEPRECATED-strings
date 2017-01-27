@@ -46,27 +46,11 @@ window.strings = (function () {
   }
 
   o.shuffleCharacters = function(x){
-    var array = x.split("");
-    var m = array.length, t, i;
-    while (m) {
-      i = Math.floor(Math.random() * m--);
-      t = array[m];
-      array[m] = array[i];
-      array[i] = t;
-    }
-    return array.join("");
+    return util.shuffle(x.split("")).join("");
   }
 
   o.shuffleWords = function(x){
-    var array = x.split(" ");
-    var m = array.length, t, i;
-    while (m) {
-      i = Math.floor(Math.random() * m--);
-      t = array[m];
-      array[m] = array[i];
-      array[i] = t;
-    }
-    return array.join(" ");
+    return util.shuffle(x.split(" ")).join(" ");
   }
 
   o.toCamelCase = function(x){
@@ -104,6 +88,18 @@ window.strings = (function () {
       return ignore.indexOf(d) == -1 || (b[i-1] && b[i-1].endsWith(":")) ? o.toSentenceCase(d) : y && y.indexOf(d) != -1 ? d : i != 0 ? d.toLowerCase() : strings.toStartCase(d);
     }).join(" ");
 
+  }
+
+  var util = {};
+  util.shuffle = function(array){
+    var m = array.length, t, i;
+    while (m) {
+      i = Math.floor(Math.random() * m--);
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
+    }
+    return array;
   }
 
   return o;
