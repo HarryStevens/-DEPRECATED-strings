@@ -37,7 +37,7 @@ Capitalizes the first letter of every word in a string.
 
 <a name="toTitleCase" href="#toTitleCase">#</a> strings.<b>toTitleCase</b>(<i>string</i>[, <i>array</i>])
 
-Transforms a string into title case, where the first letter of every word is capitalized except for certain prepositions, articles and conjunctions. You can include an optional array to ignore strings of your choice, such as acronyms.
+Transforms a string into title case, where the first letter of every word is capitalized except for certain prepositions, articles and conjunctions. Words after a colon will always be capitalized. You can include an optional array to ignore strings of your choice, such as acronyms.
 
 ```js
 strings.toTitleCase("the quick brown fox jumps over the lazy dog") // "The Quick Brown Fox Jumps over the Lazy Dog"
