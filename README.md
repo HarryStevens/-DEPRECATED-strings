@@ -13,7 +13,7 @@ Functions for change the case of words and characters.
 
 <a name="toCamelCase" href="#toCamelCase">#</a> strings.<b>toCamelCase</b>(<i>string</i>)
 
-Transforms a string into camel case. E.g. `strings.toCamelCase("Hello world!") // "helloWorld"`
+Transforms a string into camel case. `strings.toCamelCase("Hello world!") // "helloWorld"`
 
 <a name="toSentenceCase" href="#toSentenceCase">#</a> strings.<b>toSentenceCase</b>(<i>string</i>)
 
