@@ -80,7 +80,7 @@ Functions for testing strings for certain properties. Will return booleans.
 
 <a name="endsWith" href="#endsWith">#</a> strings.<b>endsWith</b>(<i>string</i>, <i>string</i>[, <i>boolean</i>])
 
-Test whether a string ends with another string. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
+Tests whether a string ends with another string. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
 
 ```js
 strings.endsWith("Hello world", "LD") // false
@@ -88,9 +88,19 @@ strings.endsWith("Hello world", "LD", true) // true
 strings.endsWith("Hello world", "LD", false) // false
 ```
 
+<a name="includes" href="#includes">#</a> strings.<b>includes</b>(<i>string</i>, <i>string</i>[, <i>boolean</i>])
+
+Tests whether a string includes another string. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
+
+```js
+strings.endsWith("Hello world", "WO") // false
+strings.endsWith("Hello world", "WO", true) // true
+strings.endsWith("Hello world", "WO", false) // false
+```
+
 <a name="startsWith" href="#startsWith">#</a> strings.<b>startsWith</b>(<i>string</i>, <i>string</i>[, <i>boolean</i>])
 
-Test whether a string starts with another string. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
+Tests whether a string starts with another string. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
 
 ```js
 strings.startsWith("Hello world", "he") // false

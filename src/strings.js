@@ -6,6 +6,10 @@ window.strings = (function () {
     return bool ? x.toUpperCase().endsWith(y.toUpperCase()) : x.endsWith(y);
   }
 
+  o.includes = function(x, y, bool){
+    return bool ? x.toUpperCase().includes(y.toUpperCase()) : x.includes(y);
+  }
+
   o.numberCommas = function(x){
     return o.removeCommas(x).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
