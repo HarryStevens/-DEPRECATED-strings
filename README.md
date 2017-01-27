@@ -10,7 +10,7 @@ To use this library, download `strings.js` or `strings.min.js` from the `src` di
 * [Queries](#queries)
 * [Transformations](#transformations)
 
-###Cases###
+###<a name="cases" href="#cases">Cases</a>###
 
 Functions for changing the case of words and characters.
 
