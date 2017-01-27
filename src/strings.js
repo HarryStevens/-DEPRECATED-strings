@@ -99,9 +99,9 @@ window.strings = (function () {
     ignore.forEach(function(d){
       ignore.push(o.toSentenceCase(d));
     });
-
-    return x.split(" ").map(function(d, i){
-      return ignore.indexOf(d) == -1 || b[i-1].endsWith(":") ? o.toSentenceCase(d) : y && y.indexOf(d) != -1 ? d : d.toLowerCase();
+    var b = x.split(" ");
+    return b.map(function(d, i){
+      return ignore.indexOf(d) == -1 || (b[i-1] && b[i-1].endsWith(":")) ? o.toSentenceCase(d) : y && y.indexOf(d) != -1 ? d : i != 0 ? d.toLowerCase() : strings.toStartCase(d);
     }).join(" ");
 
   }
