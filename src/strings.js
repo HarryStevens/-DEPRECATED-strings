@@ -45,6 +45,20 @@ window.strings = (function () {
     }
   }
 
+  o.replaceAll = function(x, y, z){
+    return x.replace(new RegExp(y, 'g'), z);
+  }
+
+  o.replaceFirst = function(x, y, z){
+    return x.replace(y, z);
+  }
+
+  o.replaceLast = function(x, y, z){
+    var a = x.split("");
+    a[x.lastIndexOf(y)] = z;
+    return a.join("");
+  }
+
   o.reverseCharacters = function(x){
     return x.toString().split("").reverse().join("");
   };

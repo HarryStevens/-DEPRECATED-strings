@@ -127,6 +127,31 @@ strings.removeTags("<span><i>Hello</i> <b>world</b>!</span>") // Hello world!
 strings.removeTags("<span><i>Hello</i> <b>world</b>!</span>", ["i", "span"]) // <span><i>Hello</i> world!</span>
 ```
 
+<a name="replaceAll" href="#replaceAll">#</a> strings.<b>replaceAll</b>(<i>string</i>, <i>string</i>, <i>string</i>)
+
+Replaces all instances of a character or a sequence of characters in a string with another character or sequence of characters.
+
+```js
+strings.replaceAll("Hello world!", "l", "z") // Hezzo worzd!
+```
+
+<a name="replaceFirst" href="#replaceFirst">#</a> strings.<b>replaceFirst</b>(<i>string</i>, <i>string</i>, <i>string</i>)
+
+Replaces the first instance of a character or a sequence of characters in a string with another character or sequence of characters. Uses the same functionality as the [native Javascript String.replace() method](http://www.w3schools.com/jsref/jsref_replace.asp).
+
+```js
+strings.replaceFirst("Hello world!", "l", "z") // Hezlo world!
+strings.replaceFirst("Hello world!", "ll", "zz") // Hezzo world!
+```
+
+<a name="replaceLast" href="#replaceLast">#</a> strings.<b>replaceLast</b>(<i>string</i>, <i>string</i>, <i>string</i>)
+
+Replaces the last instance of a character or a sequence of characters in a string with another character or sequence of characters.
+
+```js
+strings.replaceLast("Hello world!", "l", "z") // Hello worzd!
+```
+
 <a name="reverseCharacters" href="#reverseCharacters">#</a> strings.<b>reverseCharacters</b>(<i>string</i>)
 
 Reverses the order of a string's characters.
