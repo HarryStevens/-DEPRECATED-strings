@@ -5,6 +5,7 @@ strings.js is a Javascript library for manipulating strings. Javascript has many
 ##API Reference##
 * [Cases](#cases)
 * [Numbers](#numbers)
+* [Queries](#queries)
 * [Transformations](#transformations)
 
 ###Cases###
@@ -71,6 +72,30 @@ Adds commas to a number string for thousands, lakhs, crores, and so on. This is 
 Adds zeros before a string so that the length of the string equals a given number of characters. Does nothing to the string if it is already longer than the number of characters.
 ```js
 strings.numberPrependZeros("1234", 6) // "001234"
+```
+
+###Queries###
+
+Functions for testing strings for certain properties. Will return booleans.
+
+<a name="endsWith" href="#endsWith">#</a> strings.<b>endsWith</b>(<i>string</i>, <i>string</i>[, <i>boolean</i>])
+
+Test whether a string ends with another string. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
+
+```js
+strings.endsWith("Hello world", "LD") // false
+strings.endsWith("Hello world", "LD", true) // true
+strings.endsWith("Hello world", "LD", false) // false
+```
+
+<a name="startsWith" href="#startsWith">#</a> strings.<b>startsWith</b>(<i>string</i>, <i>string</i>[, <i>boolean</i>])
+
+Test whether a string starts with another string. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
+
+```js
+strings.startsWith("Hello world", "he") // false
+strings.startsWith("Hello world", "he", true) // true
+strings.startsWith("Hello world", "he", false) // false
 ```
 
 ###Transformations###

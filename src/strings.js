@@ -2,6 +2,10 @@ window.strings = (function () {
 
   var o = {};
 
+  o.endsWith = function(x, y, bool){
+    return bool ? x.toUpperCase().endsWith(y.toUpperCase()) : x.endsWith(y);
+  }
+
   o.numberCommas = function(x){
     return o.removeCommas(x).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
@@ -55,6 +59,10 @@ window.strings = (function () {
 
   o.shuffleWords = function(x){
     return util.shuffle(x.split(" ")).join(" ");
+  }
+
+  o.startsWith = function(x, y, bool){
+    return bool ? x.toUpperCase().startsWith(y.toUpperCase()) : x.startsWith(y);
   }
 
   o.toCamelCase = function(x){
