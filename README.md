@@ -114,11 +114,11 @@ Functions for applying various transformations to strings.
 
 <a name="removeCommas" href="#removeCommas">#</a> strings.<b>removeCommas</b>(<i>string</i>)
 
-Remove commas from a string.
+Removes commas from a string.
 
 <a name="removeTags" href="#removeTags">#</a> strings.<b>removeTags</b>(<i>string</i>[, <i>array</i>])
 
-Remove HTML tags from a string. You can pass an optional array with the tags you want to keep.
+Removes HTML tags from a string. You can pass an optional array with the tags you want to keep.
 
 ```js
 strings.removeTags("<span><i>Hello</i> <b>world</b>!</span>") // Hello world!
