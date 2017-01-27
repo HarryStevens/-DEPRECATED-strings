@@ -48,7 +48,7 @@ strings.toTitleCase("james comey to remain on as FBI director", ["FBI"]) // "Jam
 strings.toTitleCase("javascript: a beginner's guide to the language of the web") // Javascript: A Beginner's Guide to the Language of the Web
 ```
 
-###Numbers###
+###<a name="numbers" href="#numbers">Numbers</a>###
 
 Functions for manipulating numbers as strings.
 
@@ -76,7 +76,7 @@ Adds zeros before a string so that the length of the string equals a given numbe
 strings.numberPrependZeros("1234", 6) // "001234"
 ```
 
-###Queries###
+###<a name="queries" href="#queries">Queries</a>###
 
 Functions for testing strings for certain properties. Will return booleans.
 
@@ -110,7 +110,7 @@ strings.startsWith("Hello world", "he", true) // true
 strings.startsWith("Hello world", "he", false) // false
 ```
 
-###Transformations###
+###<a name="transformations" href="#transformations">Transformations</a>###
 
 Functions for applying various transformations to strings.
 
