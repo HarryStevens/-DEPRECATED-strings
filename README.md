@@ -116,7 +116,7 @@ Functions for applying various transformations to strings.
 
 <a name="keepAll" href="#keepAll">#</a> strings.<b>keepAll</b>(<i>string</i>, <i>string</i>)
 
-Keeps all instances of a character or a sequence of characters in a string. Removes everything else. Returns a blank string if the character or sequence of characters did not appear in the original string.
+Keeps all instances of a character or a sequence of characters in a string. Removes everything else. Returns a blank string if the character or sequence of characters does not appear in the original string.
 
 <a name="keepEnd" href="#keepEnd">#</a> strings.<b>keepEnd</b>(<i>string</i>, <i>number</i>)
 
@@ -124,7 +124,7 @@ Keeps a certain number of characters at the end of a string and removes the rest
 
 <a name="keepOne" href="#keepOne">#</a> strings.<b>keepOne</b>(<i>string</i>, <i>string</i>)
 
-Keeps one instance of a character or a sequence of characters in a string, even if the character or sequence appears multiple times. Removes everything else. Returns a blank string if the character or sequence of characters did not appear in the original string.
+Keeps one instance of a character or a sequence of characters in a string, even if the character or sequence appears multiple times. Removes everything else. Returns a blank string if the character or sequence of characters does not appear in the original string.
 
 <a name="keepStart" href="#keepStart">#</a> strings.<b>keepStart</b>(<i>string</i>, <i>number</i>)
 
