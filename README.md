@@ -114,9 +114,33 @@ strings.startsWith("Hello world", "he", false) // false
 
 Functions for applying various transformations to strings.
 
-<a name="removeCommas" href="#removeCommas">#</a> strings.<b>removeCommas</b>(<i>string</i>)
+<a name="keepAll" href="#keepAll">#</a> strings.<b>keepAll</b>(<i>string</i>, <i>string</i>)
 
-Removes commas from a string.
+Keeps all instances of a character or a sequence of characters in a string. Removes everything else. Returns a blank string if the character or sequence of characters did not appear in the original string.
+
+<a name="keepEnd" href="#keepEnd">#</a> strings.<b>keepEnd</b>(<i>string</i>, <i>number</i>)
+
+Keeps a certain number of characters at the end of a string and removes the rest.
+
+<a name="keepOne" href="#keepOne">#</a> strings.<b>keepOne</b>(<i>string</i>, <i>string</i>)
+
+Keeps one instance of a character or a sequence of characters in a string, even if the character or sequence appears multiple times. Removes everything else. Returns a blank string if the character or sequence of characters did not appear in the original string.
+
+<a name="keepStart" href="#keepStart">#</a> strings.<b>keepStart</b>(<i>string</i>, <i>number</i>)
+
+Keeps a certain number of characters at the start of a string and removes the rest.
+
+<a name="removeAll" href="#removeAll">#</a> strings.<b>removeAll</b>(<i>string</i>, <i>string</i>)
+
+Removes all instances of a character or a sequence of characters from a string.
+
+<a name="removeFirst" href="#removeFirst">#</a> strings.<b>removeFirst</b>(<i>string</i>, <i>string</i>)
+
+Removes the first instance of a character or a sequence of characters from a string.
+
+<a name="removeLast" href="#removeLast">#</a> strings.<b>removeLast</b>(<i>string</i>, <i>string</i>)
+
+Removes the last instance of a character or a sequence of characters from a string.
 
 <a name="removeTags" href="#removeTags">#</a> strings.<b>removeTags</b>(<i>string</i>[, <i>array</i>])
 

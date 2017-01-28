@@ -10,8 +10,24 @@ window.strings = (function () {
     return bool ? x.toUpperCase().includes(y.toUpperCase()) : x.includes(y);
   }
 
+  o.keepAll = function(x, y){
+    return x.split("").map(function(d){ if (d == y) return d; }).join("");
+  }
+
+  o.keepEnd = function(x, n){
+    return x.slice(x.length-n, x.length)
+  }
+
+  o.keepOne = function(x, y){
+    return o.keepAll(x, y).charAt(0);
+  }
+
+  o.keepStart = function(x, n){
+    return x.slice(0, +n)
+  }
+
   o.numberCommas = function(x){
-    return o.removeCommas(x).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return o.removeAll(x, ",").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
   o.numberDecimals = function(x, number){
@@ -19,7 +35,7 @@ window.strings = (function () {
   };
 
   o.numberLakhs = function(x){
-    x = o.removeCommas(x);
+    x = o.removeAll(x, ",");
     var afterPoint = x.indexOf(".") > 0 ? x.substring(x.indexOf("."), x.length) : "";
     x = Math.floor(x).toString();
     var lastThree = x.substring(x.length - 3), otherNumbers = x.substring(0, x.length - 3);
@@ -28,14 +44,22 @@ window.strings = (function () {
   };
 
   o.numberPrependZeros = function (x, n){
-    for (var s = "", i = 1; i <= n - o.removeCommas(x).length; i++){
+    for (var s = "", i = 1; i <= n - o.removeAll(x,",").length; i++){
       s = s + "0";
     }
-    return s + o.removeCommas(x);
+    return s + o.removeAll(x, ",");
   };
 
-  o.removeCommas = function(x){
-    return x.toString().replace(/,/g , "");
+  o.removeAll = function(x, y){
+    return o.replaceAll(x, y , "");
+  }
+
+  o.removeFirst = function(x, y){
+    return x.replace(y, "");
+  }
+
+  o.removeLast = function(x, y){
+    return o.replaceLast(x, y, "");
   }
 
   o.removeTags = function(x, y){
@@ -46,7 +70,7 @@ window.strings = (function () {
   }
 
   o.replaceAll = function(x, y, z){
-    return x.replace(new RegExp(y, 'g'), z);
+    return x.replace(new RegExp(y, "g"), z);
   }
 
   o.replaceFirst = function(x, y, z){
