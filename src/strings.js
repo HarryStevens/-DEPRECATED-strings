@@ -9,7 +9,7 @@ window.strings = (function () {
 
   o.includes = function(x, y, bool){
     x = x.toString();
-    return bool ? x.toUpperCase().includes(y.toUpperCase()) : x.includes(y);
+    return bool ? x.toUpperCase().indexOf(y.toUpperCase()) != -1 : x.indexOf(y) != -1;
   }
 
   o.keepAll = function(x, y){
@@ -69,7 +69,7 @@ window.strings = (function () {
     x = x.toString();
     return y ? x.split("<").filter(function(val){ return f(y, val); }).map(function(val){ return f(y, val); }).join("") : x.split("<").map(function(d){ return d.split(">").pop(); }).join("");
     function f(array, value){
-      return array.map(function(d){ return value.includes(d + ">"); }).indexOf(true) != -1 ? "<" + value : value.split(">")[1];
+      return array.map(function(d){ return value.indexOf(d + ">") != -1; }).indexOf(true) != -1 ? "<" + value : value.split(">")[1];
     }
   }
 
