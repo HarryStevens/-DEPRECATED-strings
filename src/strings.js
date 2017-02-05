@@ -77,6 +77,10 @@ window.strings = (function () {
     return o.replaceLast(x, y, "");
   }
 
+  o.removeSymbols = function(x){
+    return x.replace(/[^A-Z0-9]/ig, "");
+  }
+
   o.removeTags = function(x, y){
     y = y.map(function(d){ return "<" + d + ">"; }).join(",");
     y = (((y || "") + "").toLowerCase().match(/<[a-z][a-z0-9]*>/g) || []).join(""); // making sure the y arg is a string containing only tags in lowercase (<a><b><c>)
@@ -149,15 +153,16 @@ window.strings = (function () {
     return x.toString().split(" ").map(function(d){ return o.toSentenceCase(d); }).join(" ");
   };
 
-  o.toTitleCase = function(x, y){
+  o.toTitleCase = function(x, y, z){
     var ignore = ["a", "an", "and", "as", "at", "but", "by", "for", "from", "if", "in", "nor", "on", "of", "off", "or", "out", "over", "the", "to", "vs"];
     if (y) ignore = ignore.concat(y);
+    if (z) x.split(" ").forEach(function(d){ if (o.isAllCaps(o.removeSymbols(d))) ignore.push(d); });
     ignore.forEach(function(d){
       ignore.push(o.toSentenceCase(d));
     });
     var b = x.toString().split(" ");
     return b.map(function(d, i){
-      return ignore.indexOf(d) == -1 || (b[i-1] && b[i-1].endsWith(":")) ? o.toSentenceCase(d) : y && y.indexOf(d) != -1 ? d : i != 0 ? d.toLowerCase() : strings.toStartCase(d);
+      return ignore.indexOf(d) == -1 || (b[i-1] && b[i-1].endsWith(":")) ? o.toSentenceCase(d) : y && y.indexOf(d) != -1 ? d : i != 0 && !o.isAllCaps(d) ? d.toLowerCase() : strings.toStartCase(d);
     }).join(" ");
   }
 
