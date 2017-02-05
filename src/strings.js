@@ -12,6 +12,18 @@ window.strings = (function () {
     return bool ? x.toUpperCase().indexOf(y.toUpperCase()) != -1 : x.indexOf(y) != -1;
   }
 
+  o.isAllCaps = function(x) {
+    return x === x.toUpperCase();
+  }
+
+  o.isAllDigits = function(x) {
+    return /^\d+$/.test(x);
+  }
+
+  o.isAllLower = function(x) {
+    return x === x.toLowerCase();
+  }
+
   o.keepAll = function(x, y){
     return x.toString().split("").map(function(d){ if (d == y) return d; }).join("");
   }
@@ -65,13 +77,13 @@ window.strings = (function () {
     return o.replaceLast(x, y, "");
   }
 
-  o.removeTags = function(input, allowed){
-    allowed = allowed.map(function(d){ return "<" + d + ">"; }).join(",");
-    allowed = (((allowed || "") + "").toLowerCase().match(/<[a-z][a-z0-9]*>/g) || []).join(""); // making sure the allowed arg is a string containing only tags in lowercase (<a><b><c>)
+  o.removeTags = function(x, y){
+    y = y.map(function(d){ return "<" + d + ">"; }).join(",");
+    y = (((y || "") + "").toLowerCase().match(/<[a-z][a-z0-9]*>/g) || []).join(""); // making sure the y arg is a string containing only tags in lowercase (<a><b><c>)
     var tags = /<\/?([a-z][a-z0-9]*)\b[^>]*>/gi,
         commentsAndPhpTags = /<!--[\s\S]*?-->|<\?(?:php)?[\s\S]*?\?>/gi;
-    return input.replace(commentsAndPhpTags, '').replace(tags, function ($0, $1) {
-        return allowed.indexOf("<" + $1.toLowerCase() + ">") > -1 ? $0 : "";
+    return x.replace(commentsAndPhpTags, '').replace(tags, function ($0, $1) {
+        return y.indexOf("<" + $1.toLowerCase() + ">") > -1 ? $0 : "";
     });
   }
 
@@ -147,7 +159,6 @@ window.strings = (function () {
     return b.map(function(d, i){
       return ignore.indexOf(d) == -1 || (b[i-1] && b[i-1].endsWith(":")) ? o.toSentenceCase(d) : y && y.indexOf(d) != -1 ? d : i != 0 ? d.toLowerCase() : strings.toStartCase(d);
     }).join(" ");
-
   }
 
   var util = {};

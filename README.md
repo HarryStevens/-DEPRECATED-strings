@@ -100,6 +100,18 @@ strings.includes("Hello world", "WO", true) // true
 strings.includes("Hello world", "WO", false) // false
 ```
 
+<a name="isAllCaps" href="#isAllCaps">#</a> strings.<b>isAllCaps</b>(<i>string</i>)
+
+Tests whether a string contains only capital letters.
+
+<a name="isAllDigits" href="#isAllDigits">#</a> strings.<b>isAllDigits</b>(<i>string</i>)
+
+Tests whether a string contains only digits.
+
+<a name="isAllLower" href="#isAllLower">#</a> strings.<b>isAllLower</b>(<i>string</i>)
+
+Tests whether a string contains only lowercase letters.
+
 <a name="startsWith" href="#startsWith">#</a> strings.<b>startsWith</b>(<i>string</i>, <i>string</i>[, <i>boolean</i>])
 
 Tests whether a string starts with another string. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
