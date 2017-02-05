@@ -149,6 +149,15 @@ window.strings = (function () {
       .replace(/-+$/, '');            // Trim - from end of text
   }
 
+  o.toSnakeCase = function(x) {
+    return x.toString().toLowerCase()
+      .replace(/\s+/g, '_')           // Replace spaces with -
+      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+      .replace(/\_\_+/g, '_')         // Replace multiple - with single -
+      .replace(/^_+/, '')             // Trim - from start of text
+      .replace(/_+$/, '');            // Trim - from end of text
+  }
+
   o.toStartCase = function(x){
     return x.toString().split(" ").map(function(d){ return o.toSentenceCase(d); }).join(" ");
   };

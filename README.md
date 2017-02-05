@@ -34,6 +34,14 @@ Transforms a string into a slug.
 strings.toSlugCase("Hello world!") // "hello-world"
 ```
 
+<a name="toSnakeCase" href="#toSnakeCase">#</a> strings.<b>toSnakeCase</b>(<i>string</i>)
+
+Transforms a string into snake case.
+
+```js
+strings.toSlugCase("Hello world!") // "hello_world"
+```
+
 <a name="toStartCase" href="#toStartCase">#</a> strings.<b>toStartCase</b>(<i>string</i>)
 
 Capitalizes the first letter of every word in a string.
