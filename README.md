@@ -155,7 +155,7 @@ Removes the first instance of a character or a sequence of characters from a str
 
 Removes the last instance of a character or a sequence of characters from a string.
 
-<a name="removeSymbols" href="#removeSymbols">#</a> strings.<b>removeSymbols</b>(<i>string</i>[, <i>array</i>])
+<a name="removeSymbols" href="#removeSymbols">#</a> strings.<b>removeSymbols</b>(<i>string</i>)
 
 Removes anything that is not a letter from a string.
 
