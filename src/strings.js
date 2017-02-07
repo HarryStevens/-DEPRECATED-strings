@@ -69,6 +69,10 @@ window.strings = (function () {
     return o.replaceAll(x, y , "");
   }
 
+  o.removeDigits = function(x){
+    return x.replace(/\d+/g, "");
+  }
+
   o.removeFirst = function(x, y){
     return x.toString().replace(y, "");
   }

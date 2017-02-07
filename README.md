@@ -19,7 +19,7 @@ Functions for changing the case of words and characters.
 Transforms a string into camel case.
 
 ```js
-strings.toCamelCase("Hello world!") // "helloWorld"
+strings.toCamelCase("Hello world!"); // "helloWorld"
 ```
 
 <a name="toSentenceCase" href="#toSentenceCase">#</a> strings.<b>toSentenceCase</b>(<i>string</i>)
@@ -31,7 +31,7 @@ Capitalizes the first letter of the first word in a string.
 Transforms a string into a slug.
 
 ```js
-strings.toSlugCase("Hello world!") // "hello-world"
+strings.toSlugCase("Hello world!"); // "hello-world"
 ```
 
 <a name="toSnakeCase" href="#toSnakeCase">#</a> strings.<b>toSnakeCase</b>(<i>string</i>)
@@ -39,7 +39,7 @@ strings.toSlugCase("Hello world!") // "hello-world"
 Transforms a string into snake case.
 
 ```js
-strings.toSlugCase("Hello world!") // "hello_world"
+strings.toSlugCase("Hello world!"); // "hello_world"
 ```
 
 <a name="toStartCase" href="#toStartCase">#</a> strings.<b>toStartCase</b>(<i>string</i>)
@@ -51,10 +51,10 @@ Capitalizes the first letter of every word in a string.
 Transforms a string into title case, where the first letter of every word is capitalized except for certain prepositions, articles and conjunctions. Words after a colon will always be capitalized. You can include as a second argument an optional array to ignore strings of your choice, such as acronyms. You can also include as a third argument a boolean which, if true, will ignore all strings containing only uppercase letters.
 
 ```js
-strings.toTitleCase("the quick brown fox jumps over the lazy dog") // "The Quick Brown Fox Jumps over the Lazy Dog"
-strings.toTitleCase("javascript: a beginner's guide to the language of the web") // Javascript: A Beginner's Guide to the Language of the Web
-strings.toTitleCase("james comey to remain on as FBI director", ["FBI"]) // "James Comey to Remain on as FBI Director"
-strings.toTitleCase("new rules grant FBI, DEA & CIA access to raw NSA surveillance data", null, true) // New Rules Grant FBI, DEA & CIA Access to Raw NSA Surveillance Data
+strings.toTitleCase("the quick brown fox jumps over the lazy dog"); // "The Quick Brown Fox Jumps over the Lazy Dog"
+strings.toTitleCase("javascript: a beginner's guide to the language of the web"); // Javascript: A Beginner's Guide to the Language of the Web
+strings.toTitleCase("james comey to remain on as FBI director", ["FBI"]); // "James Comey to Remain on as FBI Director"
+strings.toTitleCase("new rules grant FBI, DEA & CIA access to raw NSA surveillance data", null, true); // New Rules Grant FBI, DEA & CIA Access to Raw NSA Surveillance Data
 ```
 
 ###<a name="numbers" href="#numbers">Numbers</a>###
@@ -70,8 +70,8 @@ Adds commas to a number string for thousands, millions, billions, and so on.
 Rounds a number string, both float and integer, to the nearest specified decimal place.
 
 ```js
-strings.numberDecimals("1", 2) // "1.00"
-strings.numberDecimals("1.235", 2) // "1.24"
+strings.numberDecimals("1", 2); // "1.00"
+strings.numberDecimals("1.235", 2); // "1.24"
 ```
 
 <a name="numberLakhs" href="#numberLakhs">#</a> strings.<b>numberLakhs</b>(<i>string</i>)
@@ -82,7 +82,7 @@ Adds commas to a number string for thousands, lakhs, crores, and so on. This is 
 
 Adds zeros before a string so that the length of the string equals a given number of characters. Does nothing to the string if it is already longer than the number of characters.
 ```js
-strings.numberPrependZeros("1234", 6) // "001234"
+strings.numberPrependZeros("1234", 6); // "001234"
 ```
 
 ###<a name="queries" href="#queries">Queries</a>###
@@ -94,9 +94,9 @@ Functions for testing strings for certain properties. Will return booleans.
 Tests whether a string ends with another string. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
 
 ```js
-strings.endsWith("Hello world", "LD") // false
-strings.endsWith("Hello world", "LD", true) // true
-strings.endsWith("Hello world", "LD", false) // false
+strings.endsWith("Hello world", "LD"); // false
+strings.endsWith("Hello world", "LD", true); // true
+strings.endsWith("Hello world", "LD", false); // false
 ```
 
 <a name="includes" href="#includes">#</a> strings.<b>includes</b>(<i>string</i>, <i>string</i>[, <i>boolean</i>])
@@ -104,9 +104,9 @@ strings.endsWith("Hello world", "LD", false) // false
 Tests whether a string includes another string. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
 
 ```js
-strings.includes("Hello world", "WO") // false
-strings.includes("Hello world", "WO", true) // true
-strings.includes("Hello world", "WO", false) // false
+strings.includes("Hello world", "WO"); // false
+strings.includes("Hello world", "WO", true); // true
+strings.includes("Hello world", "WO", false); // false
 ```
 
 <a name="isAllCaps" href="#isAllCaps">#</a> strings.<b>isAllCaps</b>(<i>string</i>)
@@ -126,9 +126,9 @@ Tests whether a string contains only lowercase letters.
 Tests whether a string starts with another string. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
 
 ```js
-strings.startsWith("Hello world", "he") // false
-strings.startsWith("Hello world", "he", true) // true
-strings.startsWith("Hello world", "he", false) // false
+strings.startsWith("Hello world", "he"); // false
+strings.startsWith("Hello world", "he", true); // true
+strings.startsWith("Hello world", "he", false); // false
 ```
 
 ###<a name="transformations" href="#transformations">Transformations</a>###
@@ -155,6 +155,14 @@ Keeps a certain number of characters at the start of a string and removes the re
 
 Removes all instances of a character or a sequence of characters from a string.
 
+<a name="removeDigits" href="#removeDigits">#</a> strings.<b>removeDigits</b>(<i>string</i>)
+
+Removes all digits from a string.
+
+```js
+strings.removeDigits("H1e2l3lo w45orld!6"); // Hello world!
+```
+
 <a name="removeFirst" href="#removeFirst">#</a> strings.<b>removeFirst</b>(<i>string</i>, <i>string</i>)
 
 Removes the first instance of a character or a sequence of characters from a string.
@@ -172,8 +180,8 @@ Removes anything that is not a letter from a string.
 Removes HTML tags from a string. You can pass an optional array with the tags you want to keep.
 
 ```js
-strings.removeTags("<span><i>Hello</i> <b>world</b>!</span>") // Hello world!
-strings.removeTags("<span><i>Hello</i> <b>world</b>!</span>", ["i", "span"]) // <span><i>Hello</i> world!</span>
+strings.removeTags("<span><i>Hello</i> <b>world</b>!</span>"); // Hello world!
+strings.removeTags("<span><i>Hello</i> <b>world</b>!</span>", ["i", "span"]); // <span><i>Hello</i> world!</span>
 ```
 
 <a name="replaceAll" href="#replaceAll">#</a> strings.<b>replaceAll</b>(<i>string</i>, <i>string</i>, <i>string</i>)
@@ -181,7 +189,7 @@ strings.removeTags("<span><i>Hello</i> <b>world</b>!</span>", ["i", "span"]) // 
 Replaces all instances of a character or a sequence of characters in a string with another character or sequence of characters.
 
 ```js
-strings.replaceAll("Hello world!", "l", "z") // Hezzo worzd!
+strings.replaceAll("Hello world!", "l", "z"); // Hezzo worzd!
 ```
 
 <a name="replaceFirst" href="#replaceFirst">#</a> strings.<b>replaceFirst</b>(<i>string</i>, <i>string</i>, <i>string</i>)
@@ -189,8 +197,8 @@ strings.replaceAll("Hello world!", "l", "z") // Hezzo worzd!
 Replaces the first instance of a character or a sequence of characters in a string with another character or sequence of characters. Uses the same functionality as the [native Javascript String.replace() method](http://www.w3schools.com/jsref/jsref_replace.asp).
 
 ```js
-strings.replaceFirst("Hello world!", "l", "z") // Hezlo world!
-strings.replaceFirst("Hello world!", "ll", "zz") // Hezzo world!
+strings.replaceFirst("Hello world!", "l", "z"); // Hezlo world!
+strings.replaceFirst("Hello world!", "ll", "zz"); // Hezzo world!
 ```
 
 <a name="replaceLast" href="#replaceLast">#</a> strings.<b>replaceLast</b>(<i>string</i>, <i>string</i>, <i>string</i>)
@@ -198,7 +206,7 @@ strings.replaceFirst("Hello world!", "ll", "zz") // Hezzo world!
 Replaces the last instance of a character or a sequence of characters in a string with another character or sequence of characters.
 
 ```js
-strings.replaceLast("Hello world!", "l", "z") // Hello worzd!
+strings.replaceLast("Hello world!", "l", "z"); // Hello worzd!
 ```
 
 <a name="reverseCharacters" href="#reverseCharacters">#</a> strings.<b>reverseCharacters</b>(<i>string</i>)
