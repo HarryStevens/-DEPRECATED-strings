@@ -82,7 +82,7 @@ window.strings = (function () {
   }
 
   o.removeSymbols = function(x){
-    return x.replace(/[^A-Z0-9]/ig, "");
+    return x.replace(/[^a-zA-Z ]/g, "");
   }
 
   o.removeTags = function(x, y){

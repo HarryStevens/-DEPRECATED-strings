@@ -173,7 +173,7 @@ Removes the last instance of a character or a sequence of characters from a stri
 
 <a name="removeSymbols" href="#removeSymbols">#</a> strings.<b>removeSymbols</b>(<i>string</i>)
 
-Removes anything that is not a letter from a string.
+Removes anything that is not a letter or a space from a string.
 
 <a name="removeTags" href="#removeTags">#</a> strings.<b>removeTags</b>(<i>string</i>[, <i>array</i>])
 
