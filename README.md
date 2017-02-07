@@ -39,7 +39,7 @@ strings.toSlugCase("Hello world!"); // "hello-world"
 Transforms a string into snake case.
 
 ```js
-strings.toSlugCase("Hello world!"); // "hello_world"
+strings.toSnakeCase("Hello world!"); // "hello_world"
 ```
 
 <a name="toStartCase" href="#toStartCase">#</a> strings.<b>toStartCase</b>(<i>string</i>)
