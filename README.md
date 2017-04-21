@@ -230,7 +230,7 @@ Randomly shuffles the characters of each word, but keeps the words in order. Use
 
 Randomly shuffles a string's words. Uses the [Fischer-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle).
 
-###<a name="other" href="#other">Other</a>###
+### <a name="other" href="#other">Other</a>
 
 <a name="count" href="#count">#</a> strings.<b>count</b>(<i>x</i>, <i>y</i>)
 
