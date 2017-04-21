@@ -2,6 +2,10 @@ window.strings = (function () {
 
   var o = {};
 
+  o.count = function(x, y){
+    return (x.match(new RegExp(y, "g")) || []).length;
+  }
+
   o.endsWith = function(x, y, bool){
     x = x.toString();
     return bool ? x.toUpperCase().endsWith(y.toUpperCase()) : x.endsWith(y);
@@ -169,15 +173,23 @@ window.strings = (function () {
   o.toTitleCase = function(x, y, z){
     var ignore = ["a", "an", "and", "as", "at", "but", "by", "for", "from", "if", "in", "nor", "on", "of", "off", "or", "out", "over", "the", "to", "vs"];
     if (y) ignore = ignore.concat(y);
-    if (z) x.split(" ").forEach(function(d){ if (o.isAllCaps(o.removeSymbols(d))) ignore.push(d); });
+    if (z) x.split(/[ ]/g).forEach(function(d){ if (o.isAllCaps(o.removeSymbols(d))) ignore.push(d); });
     ignore.forEach(function(d){
       ignore.push(o.toSentenceCase(d));
     });
-    var b = x.toString().split(" ");
+    var b = x.toString().split(/[ ]/g);
     return b.map(function(d, i){
       return ignore.indexOf(d) == -1 || (b[i-1] && b[i-1].endsWith(":")) ? o.toSentenceCase(d) : y && y.indexOf(d) != -1 ? d : i != 0 && !o.isAllCaps(d) ? d.toLowerCase() : strings.toStartCase(d);
     }).join(" ");
   }
+  // o.toTitleCase = function(x){
+  //   return str.replace(
+  //   /(\b.)|(.)/g,
+  //   function ($0, $1, $2) {
+  //     return ($1 && $1.toUpperCase()) || $2.toLowerCase();
+  //   }
+  //   );
+  // }
 
   var util = {};
   util.shuffle = function(array){

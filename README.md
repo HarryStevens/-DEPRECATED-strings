@@ -9,6 +9,7 @@ To use this library, download `strings.js` or `strings.min.js` from the `src` di
 * [Numbers](#numbers)
 * [Queries](#queries)
 * [Transformations](#transformations)
+* [Other](#other)
 
 ###<a name="cases" href="#cases">Cases</a>###
 
@@ -228,3 +229,9 @@ Randomly shuffles the characters of each word, but keeps the words in order. Use
 <a name="shuffleWords" href="#shuffleWords">#</a> strings.<b>shuffleWords</b>(<i>string</i>)
 
 Randomly shuffles a string's words. Uses the [Fischer-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle).
+
+###<a name="other" href="#other">Other</a>###
+
+<a name="count" href="#count">#</a> strings.<b>count</b>(<i>string</i>, <i>string</i>)
+
+Counts the number of times a substring (y) occurs in a string(x).
