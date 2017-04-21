@@ -1,17 +1,17 @@
-#strings.js#
+# strings.js
 
 strings.js is a Javascript library for manipulating strings. Javascript has many [built-in methods for manipulating strings](http://www.w3schools.com/jsref/jsref_obj_string.asp). The functions in this library are meant to supplement those.
 
 To use this library, download `strings.js` or `strings.min.js` from the `src` directory and include it in your HTML file as `<script src="path/to/strings.js"></script>` or `<script src="path/to/strings.min.js"></script>`.
 
-##API Reference##
+## API Reference
 * [Cases](#cases)
 * [Numbers](#numbers)
 * [Queries](#queries)
 * [Transformations](#transformations)
 * [Other](#other)
 
-###<a name="cases" href="#cases">Cases</a>###
+### <a name="cases" href="#cases">Cases</a>
 
 Functions for changing the case of words and characters.
 
@@ -58,7 +58,7 @@ strings.toTitleCase("james comey to remain on as FBI director", ["FBI"]); // "Ja
 strings.toTitleCase("new rules grant FBI, DEA & CIA access to raw NSA surveillance data", null, true); // New Rules Grant FBI, DEA & CIA Access to Raw NSA Surveillance Data
 ```
 
-###<a name="numbers" href="#numbers">Numbers</a>###
+### <a name="numbers" href="#numbers">Numbers</a>
 
 Functions for manipulating numbers as strings.
 
@@ -86,7 +86,7 @@ Adds zeros before a string so that the length of the string equals a given numbe
 strings.numberPrependZeros("1234", 6); // "001234"
 ```
 
-###<a name="queries" href="#queries">Queries</a>###
+### <a name="queries" href="#queries">Queries</a>
 
 Functions for testing strings for certain properties. Will return booleans.
 
@@ -132,7 +132,7 @@ strings.startsWith("Hello world", "he", true); // true
 strings.startsWith("Hello world", "he", false); // false
 ```
 
-###<a name="transformations" href="#transformations">Transformations</a>###
+### <a name="transformations" href="#transformations">Transformations</a>
 
 Functions for applying various transformations to strings.
 
