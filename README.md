@@ -232,6 +232,6 @@ Randomly shuffles a string's words. Uses the [Fischer-Yates shuffle](https://en.
 
 ###<a name="other" href="#other">Other</a>###
 
-<a name="count" href="#count">#</a> strings.<b>count</b>(<i>string</i>, <i>string</i>)
+<a name="count" href="#count">#</a> strings.<b>count</b>(<i>x</i>, <i>y</i>)
 
-Counts the number of times a substring (y) occurs in a string(x).
+Counts the number of times a substring `y` occurs in a string `x`.
