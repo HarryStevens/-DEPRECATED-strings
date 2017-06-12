@@ -138,7 +138,7 @@ Functions for applying various transformations to strings.
 
 <a name="keepAll" href="#keepAll">#</a> strings.<b>keepAll</b>(<i>string</i>, <i>substring</i>)
 
-Keeps all instances of a substring in a string. Removes everything else. Returns a blank string if the character or sequence of characters does not appear in the original string.
+Keeps all instances of a substring in a string. Removes everything else. Returns a blank string if the substring does not appear in the original string.
 
 <a name="keepEnd" href="#keepEnd">#</a> strings.<b>keepEnd</b>(<i>string</i>, <i>number</i>)
 
@@ -168,9 +168,9 @@ strings.removeDigits("H1e2l3lo w45orld!6"); // Hello world!
 
 Removes the first instance of a substring from a string.
 
-<a name="removeLast" href="#removeLast">#</a> strings.<b>removeLast</b>(<i>string</i>, <i>string</i>)
+<a name="removeLast" href="#removeLast">#</a> strings.<b>removeLast</b>(<i>string</i>, <i>substring</i>)
 
-Removes the last instance of a character or a sequence of characters from a string.
+Removes the last instance of a substring from a string.
 
 <a name="removeSymbols" href="#removeSymbols">#</a> strings.<b>removeSymbols</b>(<i>string</i>)
 
