@@ -54,8 +54,8 @@ Transforms a string into title case, where the first letter of every word is cap
 ```js
 strings.toTitleCase("the quick brown fox jumps over the lazy dog"); // "The Quick Brown Fox Jumps over the Lazy Dog"
 strings.toTitleCase("javascript: a beginner's guide to the language of the web"); // Javascript: A Beginner's Guide to the Language of the Web
-strings.toTitleCase("james comey to remain on as FBI director", ["FBI"]); // "James Comey to Remain on as FBI Director"
-strings.toTitleCase("new rules grant FBI, DEA & CIA access to raw NSA surveillance data", null, true); // New Rules Grant FBI, DEA & CIA Access to Raw NSA Surveillance Data
+strings.toTitleCase("james comey to remain on as FBI director"); // "James Comey to Remain on as FBI Director"
+strings.toTitleCase("new rules grant FBI, DEA & CIA access to raw NSA surveillance data"); // New Rules Grant FBI, DEA & CIA Access to Raw NSA Surveillance Data
 ```
 
 ### <a name="numbers" href="#numbers">Numbers</a>
