@@ -193,7 +193,7 @@ Replaces all instances of substring A in a string with substring B.
 strings.replaceAll("Hello world!", "l", "z"); // Hezzo worzd!
 ```
 
-<a name="replaceAt" href="#replaceAt">#</a> strings.<b>replaceAll</b>(<i>string</i>, <i>index</i>, <i>replacement</i>)
+<a name="replaceAt" href="#replaceAt">#</a> strings.<b>replaceAt</b>(<i>string</i>, <i>index</i>, <i>replacement</i>)
 
 Replaces the characters of a string with another string beginning at a specific index.
 
