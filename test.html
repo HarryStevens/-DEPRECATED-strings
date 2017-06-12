@@ -4,7 +4,7 @@ var test = "Hello world!";
 var testNum = "12,345,679.312";
 var testTags = "<span style='color:red'><i>Hello</i> <b>world</b>!</span>";
 var testSentence = "The quick brown fox jumps over the lazy dog";
-var testTitle = "new rules grant F.B.I., DEA & CIA access to raw NSA surveillance data";
+var testTitle = "new rules grant F.B.I., DEA & CIA access to 'raw' NSA surveillance data";
 
 var a = strings.count(test, "l"); // 3
 console.log(a);
@@ -86,6 +86,9 @@ console.log(s0, s1);
 
 var t = strings.replaceAll(test, "l", "z"); // "Hezzo worzd!"
 console.log(t);
+
+var ta = strings.replaceAt(test, 6, "Jonny"); // Hello Jonny!
+console.log(ta);
 
 var u = strings.replaceFirst(test, "l", "z"); // "Hezlo world!"
 console.log(u);

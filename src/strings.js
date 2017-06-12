@@ -22,6 +22,7 @@ window.strings = (function () {
     this.removeSymbols = removeSymbols;
     this.removeTags = removeTags;
     this.replaceAll = replaceAll;
+    this.replaceAt = replaceAt;
     this.replaceFirst = replaceFirst;
     this.replaceLast = replaceLast;
     this.reverseCharacters = reverseCharacters;
@@ -176,6 +177,12 @@ window.strings = (function () {
     return x.toString().replace(new RegExp(y, "g"), z);
   }
 
+  // Replaces the characters of a string with another string beginning at a specific index.
+  function replaceAt(string, index, replacement){
+    if (!index) index = 0;
+    return string.substr(0, index) + replacement + string.substr(index + replacement.length);
+  }
+
   // Replaces the first instance of substring (y) with substring (z) in a string (x).
   // Uses the same functionality as the native Javascript String.replace() method
   // (http://www.w3schools.com/jsref/jsref_replace.asp).
@@ -264,7 +271,7 @@ window.strings = (function () {
   };
 
   // Transforms a string into title case, where the first letter of every word is capitalized except for certain prepositions, articles and conjunctions.
-  // Dependencies: toStartCase
+  // Dependencies: toStartCase, replaceAt
   function toTitleCase(x){
 
     var punctuation = "~`!@#$%^&*()_+-={}|[];:,./<>?";
@@ -401,10 +408,6 @@ window.strings = (function () {
     });
 
     var final_words = meta_data.map(function(d){ return d.final_word; });
-
-    function replaceAt(string, index, replacement){
-      return string.substr(0, index) + replacement + string.substr(index + replacement.length);
-    }
 
     return final_words.join(" ");
 

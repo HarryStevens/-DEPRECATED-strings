@@ -193,6 +193,14 @@ Replaces all instances of substring A in a string with substring B.
 strings.replaceAll("Hello world!", "l", "z"); // Hezzo worzd!
 ```
 
+<a name="replaceAt" href="#replaceAt">#</a> strings.<b>replaceAll</b>(<i>string</i>, <i>index</i>, <i>replacement</i>)
+
+Replaces the characters of a string with another string beginning at a specific index.
+
+```js
+strings.replaceAt("Hello world!", 6, "Jonny"); // Hello Jonny!
+```
+
 <a name="replaceFirst" href="#replaceFirst">#</a> strings.<b>replaceFirst</b>(<i>string</i>, <i>substringA</i>, <i>substringB</i>)
 
 Replaces the first instance of substring A in a string with substring B. Uses the same functionality as the [native Javascript String.replace() method](http://www.w3schools.com/jsref/jsref_replace.asp).
