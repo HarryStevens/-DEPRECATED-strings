@@ -49,7 +49,7 @@ Capitalizes the first letter of every word in a string.
 
 <a name="toTitleCase" href="#toTitleCase">#</a> strings.<b>toTitleCase</b>(<i>string</i>[, <i>array</i>, <i>boolean</i>])
 
-Transforms a string into title case, where the first letter of every word is capitalized except for certain prepositions, articles and conjunctions. Words after a colon will always be capitalized. You can include as a second argument an optional array to ignore strings of your choice, such as acronyms. You can also include as a third argument a boolean which, if true, will ignore all strings containing only uppercase letters.
+Transforms a string into title case, where the first letter of every word is capitalized except for certain prepositions, articles and conjunctions.
 
 ```js
 strings.toTitleCase("the quick brown fox jumps over the lazy dog"); // "The Quick Brown Fox Jumps over the Lazy Dog"
@@ -90,9 +90,9 @@ strings.numberPrependZeros("1234", 6); // "001234"
 
 Functions for testing strings for certain properties. Will return booleans.
 
-<a name="endsWith" href="#endsWith">#</a> strings.<b>endsWith</b>(<i>string</i>, <i>string</i>[, <i>boolean</i>])
+<a name="endsWith" href="#endsWith">#</a> strings.<b>endsWith</b>(<i>string</i>, <i>substring</i>[, <i>boolean</i>])
 
-Tests whether a string ends with another string. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
+Tests whether a string ends with a substring. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
 
 ```js
 strings.endsWith("Hello world", "LD"); // false
@@ -102,7 +102,7 @@ strings.endsWith("Hello world", "LD", false); // false
 
 <a name="includes" href="#includes">#</a> strings.<b>includes</b>(<i>string</i>, <i>string</i>[, <i>boolean</i>])
 
-Tests whether a string includes another string. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
+Tests whether a string includes a substring. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
 
 ```js
 strings.includes("Hello world", "WO"); // false
@@ -112,7 +112,7 @@ strings.includes("Hello world", "WO", false); // false
 
 <a name="isAllCaps" href="#isAllCaps">#</a> strings.<b>isAllCaps</b>(<i>string</i>)
 
-Tests whether a string contains only capital letters.
+Tests whether a string contains only capital letters. Ignores symbols and numbers.
 
 <a name="isAllDigits" href="#isAllDigits">#</a> strings.<b>isAllDigits</b>(<i>string</i>)
 
@@ -120,11 +120,11 @@ Tests whether a string contains only digits.
 
 <a name="isAllLower" href="#isAllLower">#</a> strings.<b>isAllLower</b>(<i>string</i>)
 
-Tests whether a string contains only lowercase letters.
+Tests whether a string contains only lowercase letters. Ignores symbols and numbers.
 
-<a name="startsWith" href="#startsWith">#</a> strings.<b>startsWith</b>(<i>string</i>, <i>string</i>[, <i>boolean</i>])
+<a name="startsWith" href="#startsWith">#</a> strings.<b>startsWith</b>(<i>string</i>, <i>substring</i>[, <i>boolean</i>])
 
-Tests whether a string starts with another string. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
+Tests whether a string starts with a substring. Defaults to case sensitive, but you can set the third argument to <i>true</i> for case insensitive.
 
 ```js
 strings.startsWith("Hello world", "he"); // false
@@ -136,9 +136,9 @@ strings.startsWith("Hello world", "he", false); // false
 
 Functions for applying various transformations to strings.
 
-<a name="keepAll" href="#keepAll">#</a> strings.<b>keepAll</b>(<i>string</i>, <i>string</i>)
+<a name="keepAll" href="#keepAll">#</a> strings.<b>keepAll</b>(<i>string</i>, <i>substring</i>)
 
-Keeps all instances of a character or a sequence of characters in a string. Removes everything else. Returns a blank string if the character or sequence of characters does not appear in the original string.
+Keeps all instances of a substring in a string. Removes everything else. Returns a blank string if the character or sequence of characters does not appear in the original string.
 
 <a name="keepEnd" href="#keepEnd">#</a> strings.<b>keepEnd</b>(<i>string</i>, <i>number</i>)
 
@@ -146,15 +146,15 @@ Keeps a certain number of characters at the end of a string and removes the rest
 
 <a name="keepOne" href="#keepOne">#</a> strings.<b>keepOne</b>(<i>string</i>, <i>string</i>)
 
-Keeps one instance of a character or a sequence of characters in a string, even if the character or sequence appears multiple times. Removes everything else. Returns a blank string if the character or sequence of characters does not appear in the original string.
+Keeps one instance of a substring in a string, even if the substring appears multiple times. Removes everything else. Returns a blank string if the substring does not appear in the original string.
 
 <a name="keepStart" href="#keepStart">#</a> strings.<b>keepStart</b>(<i>string</i>, <i>number</i>)
 
 Keeps a certain number of characters at the start of a string and removes the rest.
 
-<a name="removeAll" href="#removeAll">#</a> strings.<b>removeAll</b>(<i>string</i>, <i>string</i>)
+<a name="removeAll" href="#removeAll">#</a> strings.<b>removeAll</b>(<i>string</i>, <i>substring</i>)
 
-Removes all instances of a character or a sequence of characters from a string.
+Removes all instances of a substring from a string.
 
 <a name="removeDigits" href="#removeDigits">#</a> strings.<b>removeDigits</b>(<i>string</i>)
 
@@ -164,9 +164,9 @@ Removes all digits from a string.
 strings.removeDigits("H1e2l3lo w45orld!6"); // Hello world!
 ```
 
-<a name="removeFirst" href="#removeFirst">#</a> strings.<b>removeFirst</b>(<i>string</i>, <i>string</i>)
+<a name="removeFirst" href="#removeFirst">#</a> strings.<b>removeFirst</b>(<i>string</i>, <i>substring</i>)
 
-Removes the first instance of a character or a sequence of characters from a string.
+Removes the first instance of a substring from a string.
 
 <a name="removeLast" href="#removeLast">#</a> strings.<b>removeLast</b>(<i>string</i>, <i>string</i>)
 
@@ -185,26 +185,26 @@ strings.removeTags("<span><i>Hello</i> <b>world</b>!</span>"); // Hello world!
 strings.removeTags("<span><i>Hello</i> <b>world</b>!</span>", ["i", "span"]); // <span><i>Hello</i> world!</span>
 ```
 
-<a name="replaceAll" href="#replaceAll">#</a> strings.<b>replaceAll</b>(<i>string</i>, <i>string</i>, <i>string</i>)
+<a name="replaceAll" href="#replaceAll">#</a> strings.<b>replaceAll</b>(<i>string</i>, <i>substring A</i>, <i>substring B</i>)
 
-Replaces all instances of a character or a sequence of characters in a string with another character or sequence of characters.
+Replaces all instances of substring A in a string with substring B.
 
 ```js
 strings.replaceAll("Hello world!", "l", "z"); // Hezzo worzd!
 ```
 
-<a name="replaceFirst" href="#replaceFirst">#</a> strings.<b>replaceFirst</b>(<i>string</i>, <i>string</i>, <i>string</i>)
+<a name="replaceFirst" href="#replaceFirst">#</a> strings.<b>replaceFirst</b>(<i>string</i>, <i>substring A</i>, <i>substring B</i>)
 
-Replaces the first instance of a character or a sequence of characters in a string with another character or sequence of characters. Uses the same functionality as the [native Javascript String.replace() method](http://www.w3schools.com/jsref/jsref_replace.asp).
+Replaces the first instance of substring A in a string with substring B. Uses the same functionality as the [native Javascript String.replace() method](http://www.w3schools.com/jsref/jsref_replace.asp).
 
 ```js
 strings.replaceFirst("Hello world!", "l", "z"); // Hezlo world!
 strings.replaceFirst("Hello world!", "ll", "zz"); // Hezzo world!
 ```
 
-<a name="replaceLast" href="#replaceLast">#</a> strings.<b>replaceLast</b>(<i>string</i>, <i>string</i>, <i>string</i>)
+<a name="replaceLast" href="#replaceLast">#</a> strings.<b>replaceLast</b>(<i>string</i>, <i>substring A</i>, <i>substring B</i>)
 
-Replaces the last instance of a character or a sequence of characters in a string with another character or sequence of characters.
+Replaces the last instance substring A in a string with substring B.
 
 ```js
 strings.replaceLast("Hello world!", "l", "z"); // Hello worzd!
@@ -232,6 +232,6 @@ Randomly shuffles a string's words. Uses the [Fischer-Yates shuffle](https://en.
 
 ### <a name="other" href="#other">Other</a>
 
-<a name="count" href="#count">#</a> strings.<b>count</b>(<i>x</i>, <i>y</i>)
+<a name="count" href="#count">#</a> strings.<b>count</b>(<i>string</i>, <i>substring</i>)
 
-Counts the number of times a substring `y` occurs in a string `x`.
+Counts the number of times a substring occurs in a string.
