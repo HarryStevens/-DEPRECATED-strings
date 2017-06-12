@@ -185,7 +185,7 @@ strings.removeTags("<span><i>Hello</i> <b>world</b>!</span>"); // Hello world!
 strings.removeTags("<span><i>Hello</i> <b>world</b>!</span>", ["i", "span"]); // <span><i>Hello</i> world!</span>
 ```
 
-<a name="replaceAll" href="#replaceAll">#</a> strings.<b>replaceAll</b>(<i>string</i>, <i>substring A</i>, <i>substring B</i>)
+<a name="replaceAll" href="#replaceAll">#</a> strings.<b>replaceAll</b>(<i>string</i>, <i>substringA</i>, <i>substringB</i>)
 
 Replaces all instances of substring A in a string with substring B.
 
@@ -193,7 +193,7 @@ Replaces all instances of substring A in a string with substring B.
 strings.replaceAll("Hello world!", "l", "z"); // Hezzo worzd!
 ```
 
-<a name="replaceFirst" href="#replaceFirst">#</a> strings.<b>replaceFirst</b>(<i>string</i>, <i>substring A</i>, <i>substring B</i>)
+<a name="replaceFirst" href="#replaceFirst">#</a> strings.<b>replaceFirst</b>(<i>string</i>, <i>substringA</i>, <i>substringB</i>)
 
 Replaces the first instance of substring A in a string with substring B. Uses the same functionality as the [native Javascript String.replace() method](http://www.w3schools.com/jsref/jsref_replace.asp).
 
@@ -202,7 +202,7 @@ strings.replaceFirst("Hello world!", "l", "z"); // Hezlo world!
 strings.replaceFirst("Hello world!", "ll", "zz"); // Hezzo world!
 ```
 
-<a name="replaceLast" href="#replaceLast">#</a> strings.<b>replaceLast</b>(<i>string</i>, <i>substring A</i>, <i>substring B</i>)
+<a name="replaceLast" href="#replaceLast">#</a> strings.<b>replaceLast</b>(<i>string</i>, <i>substringA</i>, <i>substringB</i>)
 
 Replaces the last instance substring A in a string with substring B.
 
